@@ -59,7 +59,10 @@ export default function RoomsPage() {
         const matchesSearch =
             room.room_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             room.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            room.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            room.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
             room.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            room.comment.toLowerCase().includes(searchTerm.toLowerCase()) ||
             room.dtmf.includes(searchTerm);
         const matchesCountry = !countryFilter || room.country === countryFilter;
         return matchesSearch && matchesCountry;
@@ -251,6 +254,47 @@ export default function RoomsPage() {
                     </tbody>
                 </table>
             </div>
+
+            {/* ページネーション */}
+            {totalPages > 1 && (
+                <div className="flex justify-center gap-2 mt-4">
+                    <button
+                        onClick={() => setCurrentPage(1)}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        最初
+                    </button>
+                    <button
+                        onClick={() =>
+                            setCurrentPage((p) => Math.max(1, p - 1))
+                        }
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        前へ
+                    </button>
+                    <span className="px-4 py-1 flex items-center">
+                        {currentPage} / {totalPages}
+                    </span>
+                    <button
+                        onClick={() =>
+                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                        }
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        次へ
+                    </button>
+                    <button
+                        onClick={() => setCurrentPage(totalPages)}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        最後
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

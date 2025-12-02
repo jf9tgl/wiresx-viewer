@@ -60,6 +60,8 @@ export default function NodesPage() {
         const matchesSearch =
             node.call_sign.toLowerCase().includes(searchTerm.toLowerCase()) ||
             node.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            node.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            node.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
             node.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
             node.dtmf_id.includes(searchTerm);
         const matchesCountry = !countryFilter || node.country === countryFilter;
@@ -98,7 +100,6 @@ export default function NodesPage() {
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-6">WIRES-X Node Stations</h1>
-
             <div className="mb-6 flex gap-4 flex-wrap">
                 <input
                     type="text"
@@ -129,13 +130,11 @@ export default function NodesPage() {
                     <option value="Analog">Analog</option>
                 </select>
             </div>
-
             <div className="mb-4 text-gray-600">
                 Showing {paginatedNodes.length} of {filteredNodes.length} nodes
                 {filteredNodes.length !== nodes.length &&
                     ` (filtered from ${nodes.length} total)`}
             </div>
-
             {/* ページネーション */}
             {totalPages > 1 && (
                 <div className="flex justify-center gap-2 mb-4">
@@ -176,7 +175,6 @@ export default function NodesPage() {
                     </button>
                 </div>
             )}
-
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white border border-gray-300 shadow-sm">
                     <thead className="bg-gray-100">
@@ -257,6 +255,46 @@ export default function NodesPage() {
                     </tbody>
                 </table>
             </div>
+            d{/* ページネーション */}
+            {totalPages > 1 && (
+                <div className="flex justify-center gap-2 mt-4">
+                    <button
+                        onClick={() => setCurrentPage(1)}
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        最初
+                    </button>
+                    <button
+                        onClick={() =>
+                            setCurrentPage((p) => Math.max(1, p - 1))
+                        }
+                        disabled={currentPage === 1}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        前へ
+                    </button>
+                    <span className="px-4 py-1 flex items-center">
+                        {currentPage} / {totalPages}
+                    </span>
+                    <button
+                        onClick={() =>
+                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                        }
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        次へ
+                    </button>
+                    <button
+                        onClick={() => setCurrentPage(totalPages)}
+                        disabled={currentPage === totalPages}
+                        className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                    >
+                        最後
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
