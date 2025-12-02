@@ -115,9 +115,7 @@ export default function MapPage() {
     const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
     const [locationLoading, setLocationLoading] = useState(true);
     const [locationError, setLocationError] = useState<string | null>(null);
-    const [currentPage, setCurrentPage] = useState(1);
     const [distanceFilter, setDistanceFilter] = useState<number>(100); // km
-    const itemsPerPage = 50;
     const [geocodedCoords, setGeocodedCoords] = useState<GeocodedCoordinates>(
         {}
     );
@@ -301,7 +299,7 @@ export default function MapPage() {
         }
 
         geocodeNodes();
-    }, [nodes]); // geocodedCoordsを依存配列から除外して無限ループを防ぐ
+    }, [geocodedCoords, nodes]); // geocodedCoordsを依存配列から除外して無限ループを防ぐ
 
     const countries = Array.from(
         new Set(nodes.map((node) => node.country))

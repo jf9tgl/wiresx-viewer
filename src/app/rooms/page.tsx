@@ -10,6 +10,7 @@ export default function RoomsPage() {
     const [error, setError] = useState<string | null>(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [countryFilter, setCountryFilter] = useState("");
+    const [sortBy, setSortBy] = useState<"active" | "name" | "none">("active");
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 50;
 
@@ -64,17 +65,31 @@ export default function RoomsPage() {
         return matchesSearch && matchesCountry;
     });
 
+    // ソート処理
+    const sortedRooms = [...filteredRooms].sort((a, b) => {
+        if (sortBy === "active") {
+            // アクティブ数で降順ソート（数値として比較）
+            const actA = parseInt(a.act) || 0;
+            const actB = parseInt(b.act) || 0;
+            return actB - actA;
+        } else if (sortBy === "name") {
+            // ルーム名でアルファベット順
+            return a.room_name.localeCompare(b.room_name);
+        }
+        return 0; // ソートなし
+    });
+
     // ページネーション
-    const totalPages = Math.ceil(filteredRooms.length / itemsPerPage);
-    const paginatedRooms = filteredRooms.slice(
+    const totalPages = Math.ceil(sortedRooms.length / itemsPerPage);
+    const paginatedRooms = sortedRooms.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
     );
 
-    // フィルター変更時にページをリセット
+    // フィルター・ソート変更時にページをリセット
     useEffect(() => {
         setCurrentPage(1);
-    }, [searchTerm, countryFilter]);
+    }, [searchTerm, countryFilter, sortBy]);
 
     if (loading) {
         return (
@@ -116,11 +131,22 @@ export default function RoomsPage() {
                         </option>
                     ))}
                 </select>
+                <select
+                    value={sortBy}
+                    onChange={(e) =>
+                        setSortBy(e.target.value as "active" | "name" | "none")
+                    }
+                    className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="none">No Sort</option>
+                    <option value="active">Active Count (High to Low)</option>
+                    <option value="name">Room Name (A-Z)</option>
+                </select>
             </div>
 
             <div className="mb-4 text-gray-600">
-                Showing {paginatedRooms.length} of {filteredRooms.length} rooms
-                {filteredRooms.length !== rooms.length &&
+                Showing {paginatedRooms.length} of {sortedRooms.length} rooms
+                {sortedRooms.length !== rooms.length &&
                     ` (filtered from ${rooms.length} total)`}
             </div>
 
