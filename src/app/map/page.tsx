@@ -376,7 +376,7 @@ export default function MapPage() {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-sm text-blue-800">
                     <strong>Info:</strong>{" "}
-                    地図上のマーカーをクリックすると、ノード局の詳細情報が表示されます。
+                    地図上のマーカーをクリックすると、ノード局の詳細情報が表示されます。現在は
                     {userLocation
                         ? userLocation.source === "gps"
                             ? "GPS位置情報を使用して正確な距離を計算しています。"
@@ -395,12 +395,12 @@ export default function MapPage() {
                     />
                 </div>
 
-                <div className="lg:col-span-1 h-[600px]">
-                    <div className="bg-white rounded-lg shadow-md p-4 sticky top-4">
+                <div className="lg:col-span-1 max-h-[600px]">
+                    <div className="bg-white rounded-lg shadow-md p-4 sticky top-4 max-h-[600px] overflow-y-auto">
                         <h2 className="text-xl font-bold mb-4">
                             {userLocation ? "Nearby Nodes" : "All Nodes"}
                         </h2>
-                        <div className="space-y-3 max-h-[600px] overflow-y-auto">
+                        <div className="space-y-3 h-full overflow-y-auto">
                             {nearbyNodes.slice(0, 20).map((item, index) => (
                                 <div
                                     key={index}
@@ -478,7 +478,7 @@ export default function MapPage() {
                             </h2>
                             <button
                                 onClick={() => setSelectedNode(null)}
-                                className="text-gray-500 hover:text-gray-700 text-2xl"
+                                className="text-gray-500 hover:text-gray-700 text-2xl cursor-pointer"
                             >
                                 ×
                             </button>

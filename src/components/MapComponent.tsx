@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import L from "leaflet";
 import { WiresNode } from "@/app/api/nodes/route";
 import { analogOrDigital } from "../utils/anaordig";
+import { memo } from "react";
 
 // Leafletのデフォルトアイコンの問題を修正
 const icon = L.icon({
@@ -57,11 +58,7 @@ interface MapComponentProps {
     } | null;
 }
 
-export default function MapComponent({
-    nodes,
-    center,
-    userLocation,
-}: MapComponentProps) {
+function MapComponent({ nodes, center, userLocation }: MapComponentProps) {
     // 中心座標を計算
     const mapCenter = center || {
         lat:
@@ -184,3 +181,5 @@ export default function MapComponent({
         </MapContainer>
     );
 }
+
+export default memo(MapComponent);

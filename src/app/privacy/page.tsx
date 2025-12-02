@@ -100,7 +100,7 @@ export default function PrivacyPage() {
                         <li>
                             保存先: お使いのブラウザのlocalStorage（ローカル）
                         </li>
-                        <li>保存期間: 最大1時間（その後自動削除）</li>
+                        <li>保存期間: 最大25分</li>
                         <li>個人情報は含まれません</li>
                     </ul>
                 </section>
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
                         </li>
                         <li>
                             <strong>Nominatim:</strong>{" "}
-                            GPS座標から都市名の取得（逆ジオコーディング）
+                            座標から都市名の取得（逆ジオコーディング）
                         </li>
                     </ul>
                     <p className="mb-4">
