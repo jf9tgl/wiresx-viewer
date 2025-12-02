@@ -58,51 +58,12 @@ function calculateDistance(
     return R * c;
 }
 
-// 都市名から座標を取得（Nominatim APIでジオコーディング）
-async function geocodeCity(
-    city: string,
-    state: string,
-    country: string
-): Promise<{ lat: number; lon: number } | null> {
-    try {
-        const query = `${city}, ${state}, ${country}`;
-        const response = await fetch(
-            `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
-                query
-            )}&limit=1`,
-            {
-                headers: {
-                    "User-Agent": "WIRES-X-Viewer/1.0",
-                },
-            }
-        );
-
-        if (!response.ok) return null;
-
-        const data = await response.json();
-        if (data.length > 0) {
-            return {
-                lat: parseFloat(data[0].lat),
-                lon: parseFloat(data[0].lon),
-            };
-        }
-        return null;
-    } catch (error) {
-        console.error("Geocoding error:", error);
-        return null;
-    }
-}
-
 interface UserLocation {
     lat: number;
     lon: number;
     city?: string;
     country?: string;
     source?: "gps" | "ip";
-}
-
-interface GeocodedCoordinates {
-    [key: string]: { lat: number; lon: number } | null;
 }
 
 export default function MapPage() {
@@ -116,10 +77,6 @@ export default function MapPage() {
     const [locationLoading, setLocationLoading] = useState(true);
     const [locationError, setLocationError] = useState<string | null>(null);
     const [distanceFilter, setDistanceFilter] = useState<number>(100); // km
-    const [geocodedCoords, setGeocodedCoords] = useState<GeocodedCoordinates>(
-        {}
-    );
-    const [geocodingProgress, setGeocodingProgress] = useState<number>(0);
 
     // GPS位置情報を取得
     const getGPSLocation = () => {
@@ -240,67 +197,6 @@ export default function MapPage() {
         fetchNodes();
     }, []);
 
-    // ジオコーディングキャッシュをロード
-    useEffect(() => {
-        const cached = getCachedData<GeocodedCoordinates>(
-            "wiresx_geocoded_coords"
-        );
-        if (cached) {
-            console.log("Using cached geocoded coordinates");
-            setGeocodedCoords(cached);
-        }
-    }, []);
-
-    // 座標がないノードをジオコーディング
-    useEffect(() => {
-        if (nodes.length === 0) return;
-
-        async function geocodeNodes() {
-            const nodesToGeocode = nodes.filter((node) => {
-                const lat = parseCoordinate(node.lat);
-                const lon = parseCoordinate(node.lon);
-                const key = `${node.city}-${node.state}-${node.country}`;
-                return lat === null || (lon === null && !geocodedCoords[key]);
-            });
-
-            if (nodesToGeocode.length === 0) return;
-
-            console.log(`Geocoding ${nodesToGeocode.length} nodes...`);
-            const newCoords: GeocodedCoordinates = { ...geocodedCoords };
-            let processed = 0;
-
-            // バッチ処理（APIレート制限を考慮して1秒に1リクエスト）
-            for (const node of nodesToGeocode.slice(0, 50)) {
-                // 最初の50件のみ
-                const key = `${node.city}-${node.state}-${node.country}`;
-                if (newCoords[key] === undefined) {
-                    const coords = await geocodeCity(
-                        node.city,
-                        node.state,
-                        node.country
-                    );
-                    newCoords[key] = coords;
-                    processed++;
-                    setGeocodingProgress(
-                        Math.round(
-                            (processed / Math.min(nodesToGeocode.length, 50)) *
-                                100
-                        )
-                    );
-                    // レート制限対策で1秒待機
-                    await new Promise((resolve) => setTimeout(resolve, 1000));
-                }
-            }
-
-            setGeocodedCoords(newCoords);
-            setCachedData("wiresx_geocoded_coords", newCoords);
-            setGeocodingProgress(0);
-            console.log(`Geocoding complete: ${processed} locations processed`);
-        }
-
-        geocodeNodes();
-    }, [geocodedCoords, nodes]); // geocodedCoordsを依存配列から除外して無限ループを防ぐ
-
     const countries = Array.from(
         new Set(nodes.map((node) => node.country))
     ).sort();
@@ -311,22 +207,12 @@ export default function MapPage() {
         return matchesCountry && matchesType;
     });
 
-    // 座標がある有効なノードのみ（ジオコーディング結果も使用）
+    // 座標がある有効なノードのみ
     const validNodes = useMemo(() => {
         return filteredNodes
             .map((node) => {
-                let lat = parseCoordinate(node.lat);
-                let lon = parseCoordinate(node.lon);
-
-                // 座標がない場合はジオコーディング結果を使用
-                if (lat === null || lon === null) {
-                    const key = `${node.city}-${node.state}-${node.country}`;
-                    const geocoded = geocodedCoords[key];
-                    if (geocoded) {
-                        lat = geocoded.lat;
-                        lon = geocoded.lon;
-                    }
-                }
+                const lat = parseCoordinate(node.lat);
+                const lon = parseCoordinate(node.lon);
 
                 if (lat !== null && lon !== null) {
                     return { node, lat, lon };
@@ -343,7 +229,7 @@ export default function MapPage() {
                     lon: number;
                 } => item !== null
             );
-    }, [filteredNodes, geocodedCoords]);
+    }, [filteredNodes]);
 
     // 現在地から近い順にソート
     const nearbyNodes = useMemo(() => {
@@ -429,8 +315,8 @@ export default function MapPage() {
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">All Types</option>
-                    <option value="Digital">🔵 Digital</option>
-                    <option value="Analog">🟢 Analog</option>
+                    <option value="Digital">Digital</option>
+                    <option value="Analog">Analog</option>
                 </select>
 
                 {userLocation && (
@@ -467,9 +353,6 @@ export default function MapPage() {
                 </span>
                 {userLocation && (
                     <div className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg">
-                        <span className="text-blue-700">
-                            {userLocation.source === "gps" ? "🎯" : "🌐"}
-                        </span>
                         <span className="text-sm text-blue-900">
                             {userLocation.source === "gps" ? "GPS" : "IP"}:{" "}
                             {userLocation.city && `${userLocation.city}, `}
@@ -485,14 +368,6 @@ export default function MapPage() {
                         <span className="text-red-700">⚠️</span>
                         <span className="text-sm text-red-900">
                             {locationError}
-                        </span>
-                    </div>
-                )}
-                {geocodingProgress > 0 && (
-                    <div className="flex items-center gap-2 bg-yellow-50 px-4 py-2 rounded-lg">
-                        <span className="text-yellow-700">🌍</span>
-                        <span className="text-sm text-yellow-900">
-                            都市名から座標を取得中... {geocodingProgress}%
                         </span>
                     </div>
                 )}
