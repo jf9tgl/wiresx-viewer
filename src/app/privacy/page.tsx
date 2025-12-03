@@ -8,6 +8,9 @@ export const metadata: Metadata = {
         title: "プライバシーポリシー | WIRES-X Station Viewer",
         description: "位置情報とデータの取り扱いについて",
     },
+    alternates: {
+        canonical: "/privacy",
+    },
 };
 
 export default function PrivacyPage() {

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "WIRES-X ノード局一覧",
         description: "WIRES-Xノード局の一覧を表示",
     },
+    alternates: {
+        canonical: "/nodes",
+    },
 };
 
 export default function NodesPage() {

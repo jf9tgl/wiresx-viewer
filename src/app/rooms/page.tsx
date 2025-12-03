@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "WIRES-X アクティブルーム一覧",
         description: "WIRES-Xアクティブルームの一覧を表示",
     },
+    alternates: {
+        canonical: "/rooms",
+    },
 };
 
 export default function RoomsPage() {

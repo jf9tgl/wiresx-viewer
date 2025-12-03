@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "WIRES-X ノード局マップ",
         description: "WIRES-Xノード局を地図上に表示",
     },
+    alternates: {
+        canonical: "/map",
+    },
 };
 
 export default function MapPage() {
