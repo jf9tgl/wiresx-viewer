@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "プライバシーポリシー",
+    description:
+        "WIRES-X Station Viewerのプライバシーポリシー。位置情報の取り扱い、データの保存方法について説明します。",
+    openGraph: {
+        title: "プライバシーポリシー | WIRES-X Station Viewer",
+        description: "位置情報とデータの取り扱いについて",
+    },
+};
+
 export default function PrivacyPage() {
     return (
         <div className="container mx-auto px-4 py-8 max-w-4xl">

@@ -5,7 +5,7 @@ export default function Home() {
         <>
             <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
                 <main className="container mx-auto px-4 py-16">
-                    <div className="text-center mb-12">
+                    <header className="text-center mb-12">
                         <h1 className="text-5xl font-bold text-gray-900 mb-4">
                             WIRES-X Station Viewer
                         </h1>
@@ -15,11 +15,14 @@ export default function Home() {
                         <p className="text-sm text-gray-500">
                             データソース: YAESU WIRES-X 公式サイト
                         </p>
-                    </div>
+                    </header>
 
-                    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        <Link href="/nodes">
-                            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-blue-500">
+                    <nav
+                        className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+                        aria-label="Main navigation"
+                    >
+                        <Link href="/nodes" aria-label="ノード局一覧ページへ">
+                            <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-blue-500">
                                 <div className="text-center">
                                     <h2 className="text-2xl font-bold mb-3 text-gray-900">
                                         Node Stations
@@ -31,11 +34,14 @@ export default function Home() {
                                         View Nodes →
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </Link>
 
-                        <Link href="/rooms">
-                            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-green-500">
+                        <Link
+                            href="/rooms"
+                            aria-label="アクティブルーム一覧ページへ"
+                        >
+                            <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-green-500">
                                 <div className="text-center">
                                     <h2 className="text-2xl font-bold mb-3 text-gray-900">
                                         Active Rooms
@@ -48,11 +54,11 @@ export default function Home() {
                                         View Rooms →
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </Link>
 
-                        <Link href="/map">
-                            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-purple-500">
+                        <Link href="/map" aria-label="ノード局マップページへ">
+                            <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow cursor-pointer border-t-4 border-purple-500">
                                 <div className="text-center">
                                     <h2 className="text-2xl font-bold mb-3 text-gray-900">
                                         Node Map
@@ -64,11 +70,11 @@ export default function Home() {
                                         View Map →
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </Link>
-                    </div>
+                    </nav>
 
-                    <div className="mt-16 max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+                    <section className="mt-16 max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
                         <h3 className="text-xl font-bold mb-3 text-gray-900">
                             About WIRES-X
                         </h3>
@@ -81,7 +87,7 @@ export default function Home() {
                             このサイトでは、YAESU公式サイトから取得したノード局とルームの情報を
                             見やすく表示し、検索やフィルタリングを行うことができます。
                         </p>
-                    </div>
+                    </section>
                 </main>
             </div>
 
