@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             <h1 className="text-3xl font-bold mb-6">プライバシーポリシー</h1>
 
             <div className="prose prose-blue max-w-none">
-                <p className="text-gray-600 mb-6">最終更新日: 2025年12月1日</p>
+                <p className="text-gray-600 mb-6">最終更新日: 2025年12月4日</p>
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4">1. はじめに</h2>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
                         <li>
                             保存先: お使いのブラウザのlocalStorage（ローカル）
                         </li>
-                        <li>保存期間: 最大25分</li>
+                        <li>保存期間: 最大1時間</li>
                         <li>個人情報は含まれません</li>
                     </ul>
                 </section>
@@ -152,8 +152,42 @@ export default function PrivacyPage() {
                 </section>
 
                 <section className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4">6. アクセス解析</h2>
+                    <p className="mb-4">
+                        本サービスでは、Vercel Analytics
+                        を使用してサイトのアクセス状況を分析しています。
+                    </p>
+                    <ul className="list-disc pl-6 mb-4 space-y-2">
+                        <li>
+                            <strong>Vercel Analytics:</strong>{" "}
+                            ページビュー、ページ読み込み時間などの匿名化されたアクセスデータを収集
+                        </li>
+                        <li>
+                            収集される情報:
+                            ページビュー、ユーザーエージェント、リファラー、URLなど
+                        </li>
+                        <li>
+                            個人識別情報（氏名、メールアドレス、電話番号など）は収集されません
+                        </li>
+                        <li>
+                            詳細は
+                            <a
+                                href="https://vercel.com/docs/analytics/privacy-policy"
+                                className="text-blue-600 hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {" "}
+                                Vercel Analyticsのプライバシーポリシー
+                            </a>
+                            をご参照ください
+                        </li>
+                    </ul>
+                </section>
+
+                <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4">
-                        6. 外部サービスの利用
+                        7. 外部サービスの利用
                     </h2>
                     <p className="mb-4">
                         本サービスでは、以下の外部サービスを利用しています：
@@ -169,6 +203,9 @@ export default function PrivacyPage() {
                             <strong>Nominatim:</strong>{" "}
                             座標から都市名の取得（逆ジオコーディング）
                         </li>
+                        <li>
+                            <strong>Vercel Analytics:</strong> アクセス解析
+                        </li>
                     </ul>
                     <p className="mb-4">
                         これらのサービスには、それぞれのプライバシーポリシーが適用されます。
@@ -176,7 +213,7 @@ export default function PrivacyPage() {
                 </section>
 
                 <section className="mb-8">
-                    <h2 className="text-2xl font-bold mb-4">7. Cookie</h2>
+                    <h2 className="text-2xl font-bold mb-4">8. Cookie</h2>
                     <p className="mb-4">
                         本サービスは、Cookie を使用していません。
                     </p>
@@ -184,7 +221,7 @@ export default function PrivacyPage() {
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4">
-                        8. 子どものプライバシー
+                        9. 子どものプライバシー
                     </h2>
                     <p className="mb-4">
                         本サービスは、アマチュア無線家向けに設計されており、
@@ -194,7 +231,7 @@ export default function PrivacyPage() {
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4">
-                        9. プライバシーポリシーの変更
+                        10. プライバシーポリシーの変更
                     </h2>
                     <p className="mb-4">
                         本プライバシーポリシーは、必要に応じて変更されることがあります。
@@ -204,7 +241,7 @@ export default function PrivacyPage() {
 
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4">
-                        10. お問い合わせ
+                        11. お問い合わせ
                     </h2>
                     <p className="mb-4">
                         本プライバシーポリシーに関するご質問やご意見がある場合は、
