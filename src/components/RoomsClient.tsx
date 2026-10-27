@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { WiresRoom } from "@/app/api/rooms/route";
 import { getCachedData, setCachedData } from "@/utils/cache";
+import Infomation from "./Infomation";
 
 export default function RoomsPage() {
     const [rooms, setRooms] = useState<WiresRoom[]>([]);
@@ -102,17 +103,17 @@ export default function RoomsPage() {
         );
     }
 
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-red-600">Error: {error}</div>
-            </div>
-        );
-    }
-
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-6">WIRES-X Active Rooms</h1>
+
+            {error && (
+                <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    Error: {error}
+                </div>
+            )}
+
+            <Infomation />
 
             <div className="mb-6 flex gap-4 flex-wrap">
                 <input

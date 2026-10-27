@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { WiresNode } from "@/app/api/nodes/route";
 import { getCachedData, setCachedData } from "@/utils/cache";
 import { isThisAnalog, isThisDigital } from "@/utils/anaordig";
+import Infomation from "./Infomation";
 
 export default function NodesPage() {
     const [nodes, setNodes] = useState<WiresNode[]>([]);
@@ -89,17 +90,18 @@ export default function NodesPage() {
         );
     }
 
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-red-600">Error: {error}</div>
-            </div>
-        );
-    }
-
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-6">WIRES-X Node Stations</h1>
+
+            {error && (
+                <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    Error: {error}
+                </div>
+            )}
+
+            <Infomation />
+
             <div className="mb-6 flex gap-4 flex-wrap">
                 <input
                     type="text"
@@ -255,7 +257,7 @@ export default function NodesPage() {
                     </tbody>
                 </table>
             </div>
-            d{/* ページネーション */}
+            {/* ページネーション */}
             {totalPages > 1 && (
                 <div className="flex justify-center gap-2 mt-4">
                     <button

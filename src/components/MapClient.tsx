@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { WiresNode } from "@/app/api/nodes/route";
 import { getCachedData, setCachedData } from "@/utils/cache";
 import { isThisAnalog, isThisDigital } from "@/utils/anaordig";
+import Infomation from "./Infomation";
 
 // LeafletコンポーネントをSSRなしで動的にインポート
 const MapComponent = dynamic(() => import("@/components/MapComponent"), {
@@ -282,18 +283,17 @@ export default function MapPage() {
             </div>
         );
     }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl text-red-600">Error: {error}</div>
-            </div>
-        );
-    }
-
+    
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-6">WIRES-X Node Map</h1>
+            {error && (
+                <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                    Error: {error}
+                </div>
+            )}
+
+            <Infomation />
 
             <div className="mb-6 flex flex-wrap gap-4 items-center">
                 <select

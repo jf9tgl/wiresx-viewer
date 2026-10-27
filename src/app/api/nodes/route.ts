@@ -24,6 +24,16 @@ export async function GET() {
                 cache: "no-store",
             }
         );
+        
+        if (!response.ok) {
+            console.error("Error fetching nodes:", response.statusText);
+            
+            return NextResponse.json(
+                { error: "Failed to fetch nodes" },
+                { status: response.status }
+            );
+        }
+
         const html = await response.text();
 
         // HTMLからJavaScriptの配列データを抽出
