@@ -28,7 +28,7 @@ export async function GET() {
                 { status: response.status }
             );
         }
-        
+
         const html = await response.text();
 
         // HTMLからJavaScriptの配列データを抽出

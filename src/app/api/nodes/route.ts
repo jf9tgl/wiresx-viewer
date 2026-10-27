@@ -24,7 +24,7 @@ export async function GET() {
                 cache: "no-store",
             }
         );
-        
+
         if (!response.ok) {
             console.error("Error fetching nodes:", response.statusText);
             
