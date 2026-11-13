@@ -1,0 +1,4458 @@
+{
+  "PT:guimaraes:braga": {
+    "lat": 41.44,
+    "lon": -8.3
+  },
+  "JP:azumino:nagano": {
+    "lat": 36.29,
+    "lon": 137.89
+  },
+  "JP:azuminocity:nagano": {
+    "lat": 36.29,
+    "lon": 137.89
+  },
+  "JP:higashiosaka:osaka": {
+    "lat": 34.67,
+    "lon": 135.58
+  },
+  "JP:higashiosakacity:osaka": {
+    "lat": 34.67,
+    "lon": 135.58
+  },
+  "FR:saintraphael:provencealpescotedazur": {
+    "lat": 43.42,
+    "lon": 6.77
+  },
+  "JP:kamakura:kanagawa": {
+    "lat": 35.31,
+    "lon": 139.55
+  },
+  "JP:kamakuracity:kanagawa": {
+    "lat": 35.31,
+    "lon": 139.55
+  },
+  "JP:kawaguchi:saitama": {
+    "lat": 35.81,
+    "lon": 139.71
+  },
+  "JP:kawaguchicity:saitama": {
+    "lat": 35.81,
+    "lon": 139.71
+  },
+  "JP:yokoama:kanagawa": {
+    "lat": 35.43,
+    "lon": 139.65
+  },
+  "JP:yokoamacity:kanagawa": {
+    "lat": 35.43,
+    "lon": 139.65
+  },
+  "TT:arima:arima": {
+    "lat": 10.64,
+    "lon": -61.28
+  },
+  "US:englewod:florida": {
+    "lat": 26.96,
+    "lon": -82.35
+  },
+  "US:anaheim:california": {
+    "lat": 33.84,
+    "lon": -117.91
+  },
+  "US:longbeach:california": {
+    "lat": 33.77,
+    "lon": -118.19
+  },
+  "US:union:california": {
+    "lat": 37.6,
+    "lon": -122.02
+  },
+  "US:unioncity:california": {
+    "lat": 37.6,
+    "lon": -122.02
+  },
+  "US:newyork:newyork": {
+    "lat": 40.71,
+    "lon": -74.01
+  },
+  "US:verobeach:florida": {
+    "lat": 27.64,
+    "lon": -80.4
+  },
+  "US:stockton:california": {
+    "lat": 37.96,
+    "lon": -121.29
+  },
+  "US:morenovalley:california": {
+    "lat": 33.94,
+    "lon": -117.23
+  },
+  "JP:okazaki:aichi": {
+    "lat": 34.95,
+    "lon": 137.17
+  },
+  "JP:okazakicity:aichi": {
+    "lat": 34.95,
+    "lon": 137.17
+  },
+  "JP:nagoya:aichi": {
+    "lat": 35.18,
+    "lon": 136.91
+  },
+  "JP:nagoyacity:aichi": {
+    "lat": 35.18,
+    "lon": 136.91
+  },
+  "US:bethelpark:pennsylvania": {
+    "lat": 40.33,
+    "lon": -80.04
+  },
+  "US:wodscross:utah": {
+    "lat": 40.87,
+    "lon": -111.89
+  },
+  "US:iola:wisconsin": {
+    "lat": 44.51,
+    "lon": -89.13
+  },
+  "US:laporte:indiana": {
+    "lat": 41.61,
+    "lon": -86.72
+  },
+  "US:arvada:colorado": {
+    "lat": 39.8,
+    "lon": -105.09
+  },
+  "US:postfalls:idaho": {
+    "lat": 47.72,
+    "lon": -116.95
+  },
+  "US:winona:minnesota": {
+    "lat": 44.05,
+    "lon": -91.64
+  },
+  "US:newfane:newyork": {
+    "lat": 43.29,
+    "lon": -78.71
+  },
+  "US:middletown:delaware": {
+    "lat": 39.52,
+    "lon": -84.4
+  },
+  "US:fortmorgan:colorado": {
+    "lat": 40.25,
+    "lon": -103.8
+  },
+  "US:brokenarrow:oklahoma": {
+    "lat": 36.05,
+    "lon": -95.79
+  },
+  "US:sanantonio:texas": {
+    "lat": 29.42,
+    "lon": -98.49
+  },
+  "US:athens:alabama": {
+    "lat": 34.8,
+    "lon": -86.97
+  },
+  "US:aurora:colorado": {
+    "lat": 39.73,
+    "lon": -104.83
+  },
+  "US:rosamond:california": {
+    "lat": 34.86,
+    "lon": -118.16
+  },
+  "US:hermiston:oregon": {
+    "lat": 45.84,
+    "lon": -119.29
+  },
+  "US:bartlett:tennessee": {
+    "lat": 35.2,
+    "lon": -89.87
+  },
+  "US:monrovia:california": {
+    "lat": 34.15,
+    "lon": -118
+  },
+  "US:neenah:wisconsin": {
+    "lat": 44.19,
+    "lon": -88.46
+  },
+  "US:luray:virginia": {
+    "lat": 38.67,
+    "lon": -78.46
+  },
+  "US:yucaipa:california": {
+    "lat": 34.03,
+    "lon": -117.04
+  },
+  "US:troy:alabama": {
+    "lat": 31.81,
+    "lon": -85.97
+  },
+  "US:northpole:alaska": {
+    "lat": 64.75,
+    "lon": -147.35
+  },
+  "US:beaumont:texas": {
+    "lat": 30.09,
+    "lon": -94.1
+  },
+  "US:antelope:oregon": {
+    "lat": 38.71,
+    "lon": -121.33
+  },
+  "US:nortonshores:michigan": {
+    "lat": 43.17,
+    "lon": -86.26
+  },
+  "US:buffalo:texas": {
+    "lat": 31.46,
+    "lon": -96.06
+  },
+  "US:bullhead:arizona": {
+    "lat": 35.15,
+    "lon": -114.57
+  },
+  "US:bullheadcity:arizona": {
+    "lat": 35.15,
+    "lon": -114.57
+  },
+  "ES:caceres:extremadura": {
+    "lat": 39.48,
+    "lon": -6.37
+  },
+  "JP:ichihara:chiba": {
+    "lat": 35.52,
+    "lon": 140.08
+  },
+  "JP:ichiharacity:chiba": {
+    "lat": 35.52,
+    "lon": 140.08
+  },
+  "JP:matsudo:chiba": {
+    "lat": 35.78,
+    "lon": 139.9
+  },
+  "JP:matsudocity:chiba": {
+    "lat": 35.78,
+    "lon": 139.9
+  },
+  "JP:kisarazu:chiba": {
+    "lat": 35.38,
+    "lon": 139.93
+  },
+  "JP:kisarazucity:chiba": {
+    "lat": 35.38,
+    "lon": 139.93
+  },
+  "JP:katsura:chiba": {
+    "lat": 35.15,
+    "lon": 140.32
+  },
+  "JP:katsuracity:chiba": {
+    "lat": 35.15,
+    "lon": 140.32
+  },
+  "JP:kurashiki:okayama": {
+    "lat": 34.58,
+    "lon": 133.77
+  },
+  "JP:kurashikicity:okayama": {
+    "lat": 34.58,
+    "lon": 133.77
+  },
+  "US:rondrock:texas": {
+    "lat": 30.51,
+    "lon": -97.68
+  },
+  "JP:kashiwazaki:niigata": {
+    "lat": 37.37,
+    "lon": 138.55
+  },
+  "JP:kashiwazakicity:niigata": {
+    "lat": 37.37,
+    "lon": 138.55
+  },
+  "US:buenapark:california": {
+    "lat": 33.87,
+    "lon": -118
+  },
+  "ES:merida:extremadura": {
+    "lat": 38.92,
+    "lon": -6.34
+  },
+  "PT:chaves:vilareal": {
+    "lat": 41.74,
+    "lon": -7.47
+  },
+  "PT:covilha:castelobranco": {
+    "lat": 40.28,
+    "lon": -7.51
+  },
+  "PT:almada:lisboa": {
+    "lat": 38.68,
+    "lon": -9.16
+  },
+  "PT:amadora:lisbon": {
+    "lat": 38.75,
+    "lon": -9.23
+  },
+  "PT:angradoeroismo:azores": {
+    "lat": 38.65,
+    "lon": -27.22
+  },
+  "DE:achern:badenwurttemberg": {
+    "lat": 48.63,
+    "lon": 8.08
+  },
+  "DE:ratingen:nordrheinwestfalen": {
+    "lat": 51.3,
+    "lon": 6.85
+  },
+  "DE:bochum:nordrheinwestfalen": {
+    "lat": 51.48,
+    "lon": 7.22
+  },
+  "DE:geisenheim:hessen": {
+    "lat": 49.98,
+    "lon": 7.97
+  },
+  "DE:herne:nordrheinwestfalen": {
+    "lat": 51.54,
+    "lon": 7.23
+  },
+  "DE:eschenbach:badenwurttemberg": {
+    "lat": 48.65,
+    "lon": 9.67
+  },
+  "DE:berlin:berlin": {
+    "lat": 52.52,
+    "lon": 13.41
+  },
+  "DE:coesfeld:nordrheinwestfalen": {
+    "lat": 51.94,
+    "lon": 7.17
+  },
+  "US:blomington:indiana": {
+    "lat": 39.17,
+    "lon": -86.53
+  },
+  "PH:angeles:pampanga": {
+    "lat": 15.15,
+    "lon": 120.58
+  },
+  "PH:angelescity:pampanga": {
+    "lat": 15.15,
+    "lon": 120.58
+  },
+  "GR:thessaloniki:kalamaria": {
+    "lat": 40.64,
+    "lon": 22.93
+  },
+  "PH:roxas:capiz": {
+    "lat": 11.59,
+    "lon": 122.75
+  },
+  "PH:roxascity:capiz": {
+    "lat": 11.59,
+    "lon": 122.75
+  },
+  "US:yonkers:newyork": {
+    "lat": 40.93,
+    "lon": -73.9
+  },
+  "PH:generalsantos:sothcotabato": {
+    "lat": 6.11,
+    "lon": 125.17
+  },
+  "PH:generalsantoscity:sothcotabato": {
+    "lat": 6.11,
+    "lon": 125.17
+  },
+  "ES:montblanc:catalonia": {
+    "lat": 41.38,
+    "lon": 1.16
+  },
+  "ES:malaga:andalusia": {
+    "lat": 36.72,
+    "lon": -4.42
+  },
+  "ES:granada:andalusia": {
+    "lat": 37.19,
+    "lon": -3.61
+  },
+  "ES:sansebastiandelagomera:canaryislands": {
+    "lat": 28.09,
+    "lon": -17.11
+  },
+  "ES:esparreguera:catalonia": {
+    "lat": 41.54,
+    "lon": 1.87
+  },
+  "US:eldorado:arkansas": {
+    "lat": 33.21,
+    "lon": -92.67
+  },
+  "FR:plonevezquintin:bretagne": {
+    "lat": 48.28,
+    "lon": -3.23
+  },
+  "FR:galgon:aquitaine": {
+    "lat": 44.99,
+    "lon": -0.27
+  },
+  "FR:pelloailleslesvignes:paysdelaloire": {
+    "lat": 47.52,
+    "lon": -0.44
+  },
+  "FR:lhaylesroses:iledefrance": {
+    "lat": 48.78,
+    "lon": 2.34
+  },
+  "FR:libercort:nordpasdecalais": {
+    "lat": 50.48,
+    "lon": 3.02
+  },
+  "FR:raismes:nordpasdecalais": {
+    "lat": 50.38,
+    "lon": 3.48
+  },
+  "FR:monswiller:alsace": {
+    "lat": 48.76,
+    "lon": 7.38
+  },
+  "FR:regusse:provencealpescotedazur": {
+    "lat": 43.66,
+    "lon": 6.13
+  },
+  "FR:labatieneuve:provencealpescotedazur": {
+    "lat": 44.57,
+    "lon": 6.2
+  },
+  "FR:rungis:iledefrance": {
+    "lat": 48.75,
+    "lon": 2.35
+  },
+  "FR:plancherbas:franchecomte": {
+    "lat": 47.72,
+    "lon": 6.73
+  },
+  "FR:pujaut:languedocrossillon": {
+    "lat": 44,
+    "lon": 4.78
+  },
+  "JP:yonezawa:yamagata": {
+    "lat": 37.91,
+    "lon": 140.12
+  },
+  "JP:yonezawacity:yamagata": {
+    "lat": 37.91,
+    "lon": 140.12
+  },
+  "JP:okayama:okayama": {
+    "lat": 34.65,
+    "lon": 133.93
+  },
+  "JP:okayamacity:okayama": {
+    "lat": 34.65,
+    "lon": 133.93
+  },
+  "JP:fukui:fukui": {
+    "lat": 36.06,
+    "lon": 136.22
+  },
+  "JP:fukuicity:fukui": {
+    "lat": 36.06,
+    "lon": 136.22
+  },
+  "JP:fukuoka:fukuoka": {
+    "lat": 33.6,
+    "lon": 130.42
+  },
+  "JP:fukuokacity:fukuoka": {
+    "lat": 33.6,
+    "lon": 130.42
+  },
+  "JP:chikushino:fukuoka": {
+    "lat": 33.5,
+    "lon": 130.52
+  },
+  "JP:chikushinocity:fukuoka": {
+    "lat": 33.5,
+    "lon": 130.52
+  },
+  "FR:saintpierre:reunion": {
+    "lat": 43.29,
+    "lon": 5.41
+  },
+  "GB:aberdeen:aberdeenshire": {
+    "lat": 57.14,
+    "lon": -2.1
+  },
+  "JP:koriyama:fukushima": {
+    "lat": 37.4,
+    "lon": 140.38
+  },
+  "JP:koriyamacity:fukushima": {
+    "lat": 37.4,
+    "lon": 140.38
+  },
+  "JP:aizuwakamatsu:fukushima": {
+    "lat": 37.49,
+    "lon": 139.95
+  },
+  "JP:aizuwakamatsucity:fukushima": {
+    "lat": 37.49,
+    "lon": 139.95
+  },
+  "JP:iwaki:fukushima": {
+    "lat": 37.05,
+    "lon": 140.88
+  },
+  "JP:iwakicity:fukushima": {
+    "lat": 37.05,
+    "lon": 140.88
+  },
+  "US:boise:idaho": {
+    "lat": 43.61,
+    "lon": -116.2
+  },
+  "US:broklyn:newyork": {
+    "lat": 40.65,
+    "lon": -73.95
+  },
+  "GB:langport:somerset": {
+    "lat": 51.04,
+    "lon": -2.83
+  },
+  "GB:morecambe:lancashire": {
+    "lat": 54.07,
+    "lon": -2.86
+  },
+  "GB:middlesbrogh:northyorkshire": {
+    "lat": 54.58,
+    "lon": -1.23
+  },
+  "GB:sothport:lancashire": {
+    "lat": 53.65,
+    "lon": -3.01
+  },
+  "GB:hunstanton:norfolk": {
+    "lat": 52.95,
+    "lon": 0.5
+  },
+  "GB:grays:essex": {
+    "lat": 51.48,
+    "lon": 0.33
+  },
+  "GB:marlborogh:england": {
+    "lat": 51.42,
+    "lon": -1.73
+  },
+  "GB:stokeontrent:staffordshire": {
+    "lat": 53,
+    "lon": -2.19
+  },
+  "GB:portsmoth:hampshire": {
+    "lat": 50.8,
+    "lon": -1.09
+  },
+  "GB:london:london": {
+    "lat": 51.51,
+    "lon": -0.13
+  },
+  "GB:bromley:kent": {
+    "lat": 51.41,
+    "lon": 0.02
+  },
+  "GB:maryport:cumbria": {
+    "lat": 54.71,
+    "lon": -3.5
+  },
+  "GB:portland:dorset": {
+    "lat": 50.57,
+    "lon": -2.44
+  },
+  "GB:hastings:eastsussex": {
+    "lat": 50.86,
+    "lon": 0.57
+  },
+  "GB:wolverhampton:westmidlands": {
+    "lat": 52.59,
+    "lon": -2.12
+  },
+  "GB:weymoth:dorset": {
+    "lat": 50.61,
+    "lon": -2.46
+  },
+  "GB:kingslynn:norfolk": {
+    "lat": 52.75,
+    "lon": 0.4
+  },
+  "GB:markfield:leicestershire": {
+    "lat": 52.69,
+    "lon": -1.27
+  },
+  "GB:manchester:cheshire": {
+    "lat": 53.48,
+    "lon": -2.24
+  },
+  "GB:leeds:westyorkshire": {
+    "lat": 53.8,
+    "lon": -1.55
+  },
+  "GB:swansea:swansea": {
+    "lat": 51.62,
+    "lon": -3.94
+  },
+  "GB:accrington:lancashire": {
+    "lat": 53.75,
+    "lon": -2.36
+  },
+  "GB:belfast:contyantrim": {
+    "lat": 54.6,
+    "lon": -5.93
+  },
+  "GB:sothampton:hampshire": {
+    "lat": 50.9,
+    "lon": -1.4
+  },
+  "GB:lancaster:lancashire": {
+    "lat": 54.05,
+    "lon": -2.8
+  },
+  "GB:northampton:northamptonshire": {
+    "lat": 52.25,
+    "lon": -0.88
+  },
+  "GB:newbury:berkshire": {
+    "lat": 51.4,
+    "lon": -1.32
+  },
+  "GB:swindon:wiltshiretowns": {
+    "lat": 51.56,
+    "lon": -1.78
+  },
+  "GB:torquay:devon": {
+    "lat": 50.46,
+    "lon": -3.53
+  },
+  "GB:wakefield:westyorkshire": {
+    "lat": 53.68,
+    "lon": -1.5
+  },
+  "JP:mino:gifu": {
+    "lat": 34.83,
+    "lon": 135.47
+  },
+  "JP:minocity:gifu": {
+    "lat": 34.83,
+    "lon": 135.47
+  },
+  "JP:gujo:gifu": {
+    "lat": 35.74,
+    "lon": 136.96
+  },
+  "JP:gujocity:gifu": {
+    "lat": 35.74,
+    "lon": 136.96
+  },
+  "US:miami:florida": {
+    "lat": 25.77,
+    "lon": -80.19
+  },
+  "US:sanjose:california": {
+    "lat": 37.34,
+    "lon": -121.89
+  },
+  "PH:quezon:metromanila": {
+    "lat": 14.65,
+    "lon": 121.05
+  },
+  "PH:quezoncity:metromanila": {
+    "lat": 14.65,
+    "lon": 121.05
+  },
+  "US:massapequa:newyork": {
+    "lat": 40.68,
+    "lon": -73.47
+  },
+  "PH:tarlac:tarlac": {
+    "lat": 15.48,
+    "lon": 120.6
+  },
+  "PH:cagayandeoro:misamisoriental": {
+    "lat": 8.48,
+    "lon": 124.65
+  },
+  "PH:cebu:cebu": {
+    "lat": 10.32,
+    "lon": 123.89
+  },
+  "PH:cebucity:cebu": {
+    "lat": 10.32,
+    "lon": 123.89
+  },
+  "US:tempe:arizona": {
+    "lat": 33.41,
+    "lon": -111.91
+  },
+  "PH:zamboanga:zamboangadelsur": {
+    "lat": 6.91,
+    "lon": 122.07
+  },
+  "US:losangeles:california": {
+    "lat": 34.05,
+    "lon": -118.24
+  },
+  "US:florida:florida": {
+    "lat": 25.45,
+    "lon": -80.48
+  },
+  "US:floridacity:florida": {
+    "lat": 25.45,
+    "lon": -80.48
+  },
+  "US:homestead:florida": {
+    "lat": 25.47,
+    "lon": -80.48
+  },
+  "PH:bacor:cavite": {
+    "lat": 14.46,
+    "lon": 120.94
+  },
+  "JP:maebashi:gunma": {
+    "lat": 36.4,
+    "lon": 139.08
+  },
+  "JP:maebashicity:gunma": {
+    "lat": 36.4,
+    "lon": 139.08
+  },
+  "JP:takasaki:gunma": {
+    "lat": 36.33,
+    "lon": 139.02
+  },
+  "JP:takasakicity:gunma": {
+    "lat": 36.33,
+    "lon": 139.02
+  },
+  "US:camarillo:california": {
+    "lat": 34.22,
+    "lon": -119.04
+  },
+  "US:ranchopalosverdes:california": {
+    "lat": 33.74,
+    "lon": -118.39
+  },
+  "PH:davao:phdavaodelsur": {
+    "lat": 7.07,
+    "lon": 125.61
+  },
+  "PH:davaocity:phdavaodelsur": {
+    "lat": 7.07,
+    "lon": 125.61
+  },
+  "US:carson:california": {
+    "lat": 33.83,
+    "lon": -118.28
+  },
+  "US:warwick:newyork": {
+    "lat": 41.26,
+    "lon": -74.36
+  },
+  "US:chatsworth:california": {
+    "lat": 34.26,
+    "lon": -118.6
+  },
+  "US:oxnard:california": {
+    "lat": 34.2,
+    "lon": -119.18
+  },
+  "US:winnetka:california": {
+    "lat": 42.11,
+    "lon": -87.74
+  },
+  "PH:batangas:batangas": {
+    "lat": 13.76,
+    "lon": 121.06
+  },
+  "PH:batangascity:batangas": {
+    "lat": 13.76,
+    "lon": 121.06
+  },
+  "GB:dundee:dundee": {
+    "lat": 56.47,
+    "lon": -2.97
+  },
+  "CH:basel:baselstadt": {
+    "lat": 47.56,
+    "lon": 7.57
+  },
+  "CH:poschiavo:cantongrigioni": {
+    "lat": 46.32,
+    "lon": 10.06
+  },
+  "CH:landquart:graubunden": {
+    "lat": 46.95,
+    "lon": 9.57
+  },
+  "IT:caronnopertusella:lombardy": {
+    "lat": 45.6,
+    "lon": 9.05
+  },
+  "CH:villmergen:aargau": {
+    "lat": 47.35,
+    "lon": 8.25
+  },
+  "CH:samedan:graubunden": {
+    "lat": 46.53,
+    "lon": 9.87
+  },
+  "JP:takarazuka:hyogo": {
+    "lat": 34.8,
+    "lon": 135.36
+  },
+  "JP:takarazukacity:hyogo": {
+    "lat": 34.8,
+    "lon": 135.36
+  },
+  "JP:kobe:hyogo": {
+    "lat": 34.69,
+    "lon": 135.18
+  },
+  "JP:kobecity:hyogo": {
+    "lat": 34.69,
+    "lon": 135.18
+  },
+  "HU:zalaegerszeg:zala": {
+    "lat": 46.84,
+    "lon": 16.84
+  },
+  "HU:babolna:komaromesztergom": {
+    "lat": 47.64,
+    "lon": 17.98
+  },
+  "HU:cegled:pest": {
+    "lat": 47.17,
+    "lon": 19.8
+  },
+  "CO:villadeleyva:boyaca": {
+    "lat": 5.63,
+    "lon": -73.52
+  },
+  "CO:tunja:boyaca": {
+    "lat": 5.54,
+    "lon": -73.37
+  },
+  "JP:ibara:okayama": {
+    "lat": 34.6,
+    "lon": 133.47
+  },
+  "JP:ibaracity:okayama": {
+    "lat": 34.6,
+    "lon": 133.47
+  },
+  "PA:penonome:cocle": {
+    "lat": 8.52,
+    "lon": -80.36
+  },
+  "JP:fukuyama:hiroshima": {
+    "lat": 34.48,
+    "lon": 133.37
+  },
+  "JP:fukuyamacity:hiroshima": {
+    "lat": 34.48,
+    "lon": 133.37
+  },
+  "JP:hiroshima:hiroshima": {
+    "lat": 34.4,
+    "lon": 132.45
+  },
+  "JP:hiroshimacity:hiroshima": {
+    "lat": 34.4,
+    "lon": 132.45
+  },
+  "JP:miyoshi:hiroshima": {
+    "lat": 34.8,
+    "lon": 132.85
+  },
+  "JP:miyoshicity:hiroshima": {
+    "lat": 34.8,
+    "lon": 132.85
+  },
+  "JP:tsuchiura:ibaraki": {
+    "lat": 36.09,
+    "lon": 140.21
+  },
+  "JP:tsuchiuracity:ibaraki": {
+    "lat": 36.09,
+    "lon": 140.21
+  },
+  "JP:hitachi:ibaraki": {
+    "lat": 36.6,
+    "lon": 140.65
+  },
+  "JP:hitachicity:ibaraki": {
+    "lat": 36.6,
+    "lon": 140.65
+  },
+  "IT:pregnanamilanese:mi": {
+    "lat": 45.52,
+    "lon": 9.01
+  },
+  "IT:sestofiorentino:tuscany": {
+    "lat": 43.83,
+    "lon": 11.2
+  },
+  "IT:cassolnovo:lombardy": {
+    "lat": 45.36,
+    "lon": 8.81
+  },
+  "IT:ardea:lazio": {
+    "lat": 41.61,
+    "lon": 12.54
+  },
+  "IT:pomponesco:lombardy": {
+    "lat": 44.93,
+    "lon": 10.59
+  },
+  "IT:triuggio:lombardy": {
+    "lat": 45.66,
+    "lon": 9.27
+  },
+  "IT:cosenza:calabria": {
+    "lat": 39.3,
+    "lon": 16.25
+  },
+  "IT:collegno:piedmont": {
+    "lat": 45.08,
+    "lon": 7.57
+  },
+  "IT:domeggedicadore:veneto": {
+    "lat": 46.46,
+    "lon": 12.41
+  },
+  "IT:polignanoamare:apulia": {
+    "lat": 40.99,
+    "lon": 17.22
+  },
+  "IT:cormayeur:aostavalley": {
+    "lat": 45.8,
+    "lon": 6.97
+  },
+  "IT:sezze:lazio": {
+    "lat": 41.5,
+    "lon": 13.06
+  },
+  "IT:arona:piedmont": {
+    "lat": 45.76,
+    "lon": 8.56
+  },
+  "JP:nagaoka:niigata": {
+    "lat": 37.45,
+    "lon": 138.85
+  },
+  "JP:nagaokacity:niigata": {
+    "lat": 37.45,
+    "lon": 138.85
+  },
+  "JP:chuo:tokyo": {
+    "lat": 35.59,
+    "lon": 138.5
+  },
+  "JP:chuoku:tokyo": {
+    "lat": 35.59,
+    "lon": 138.5
+  },
+  "JP:kawasaki:kanagawa": {
+    "lat": 35.52,
+    "lon": 139.72
+  },
+  "JP:kawasakicity:kanagawa": {
+    "lat": 35.52,
+    "lon": 139.72
+  },
+  "JP:urayasu:chiba": {
+    "lat": 35.67,
+    "lon": 139.89
+  },
+  "JP:urayasucity:chiba": {
+    "lat": 35.67,
+    "lon": 139.89
+  },
+  "JP:ayase:kanagawa": {
+    "lat": 35.44,
+    "lon": 139.43
+  },
+  "JP:ayasecity:kanagawa": {
+    "lat": 35.44,
+    "lon": 139.43
+  },
+  "JP:shinshiro:aichi": {
+    "lat": 34.9,
+    "lon": 137.5
+  },
+  "JP:shinshirocity:aichi": {
+    "lat": 34.9,
+    "lon": 137.5
+  },
+  "JP:nakatsugawa:gifu": {
+    "lat": 35.48,
+    "lon": 137.5
+  },
+  "JP:nakatsugawacity:gifu": {
+    "lat": 35.48,
+    "lon": 137.5
+  },
+  "JP:kakegawa:shizuoka": {
+    "lat": 34.77,
+    "lon": 138.02
+  },
+  "JP:kakegawacity:shizuoka": {
+    "lat": 34.77,
+    "lon": 138.02
+  },
+  "JP:kyoto:kyoto": {
+    "lat": 35.02,
+    "lon": 135.75
+  },
+  "JP:kyotocity:kyoto": {
+    "lat": 35.02,
+    "lon": 135.75
+  },
+  "JP:hashimoto:wakayama": {
+    "lat": 34.32,
+    "lon": 135.62
+  },
+  "JP:hashimotocity:wakayama": {
+    "lat": 34.32,
+    "lon": 135.62
+  },
+  "JP:kawanishi:hyogo": {
+    "lat": 34.82,
+    "lon": 135.42
+  },
+  "JP:kawanishicity:hyogo": {
+    "lat": 34.82,
+    "lon": 135.42
+  },
+  "JP:fukuchiyama:kyoto": {
+    "lat": 35.3,
+    "lon": 135.12
+  },
+  "JP:fukuchiyamacity:kyoto": {
+    "lat": 35.3,
+    "lon": 135.12
+  },
+  "JP:muko:kyoto": {
+    "lat": 34.97,
+    "lon": 135.7
+  },
+  "JP:mukocity:kyoto": {
+    "lat": 34.97,
+    "lon": 135.7
+  },
+  "JP:mihara:hiroshima": {
+    "lat": 34.4,
+    "lon": 133.08
+  },
+  "JP:miharacity:hiroshima": {
+    "lat": 34.4,
+    "lon": 133.08
+  },
+  "JP:higashihiroshima:hiroshima": {
+    "lat": 34.41,
+    "lon": 132.74
+  },
+  "JP:higashihiroshimacity:hiroshima": {
+    "lat": 34.41,
+    "lon": 132.74
+  },
+  "JP:soja:okayama": {
+    "lat": 34.68,
+    "lon": 133.75
+  },
+  "JP:sojacity:okayama": {
+    "lat": 34.68,
+    "lon": 133.75
+  },
+  "JP:mima:tokushima": {
+    "lat": 34.05,
+    "lon": 134.14
+  },
+  "JP:mimacity:tokushima": {
+    "lat": 34.05,
+    "lon": 134.14
+  },
+  "JP:hadano:kanagawa": {
+    "lat": 35.37,
+    "lon": 139.22
+  },
+  "JP:hadanocity:kanagawa": {
+    "lat": 35.37,
+    "lon": 139.22
+  },
+  "JP:nagasaki:nagasaki": {
+    "lat": 32.75,
+    "lon": 129.88
+  },
+  "JP:nagasakicity:nagasaki": {
+    "lat": 32.75,
+    "lon": 129.88
+  },
+  "JP:miyakonojo:miyazaki": {
+    "lat": 31.73,
+    "lon": 131.07
+  },
+  "JP:miyakonojocity:miyazaki": {
+    "lat": 31.73,
+    "lon": 131.07
+  },
+  "JP:ichikikushikino:kagoshima": {
+    "lat": 31.73,
+    "lon": 130.29
+  },
+  "JP:ichikikushikinocity:kagoshima": {
+    "lat": 31.73,
+    "lon": 130.29
+  },
+  "JP:kagoshima:kagoshima": {
+    "lat": 31.57,
+    "lon": 130.55
+  },
+  "JP:kagoshimacity:kagoshima": {
+    "lat": 31.57,
+    "lon": 130.55
+  },
+  "JP:sasebo:nagasaki": {
+    "lat": 33.17,
+    "lon": 129.73
+  },
+  "JP:sasebocity:nagasaki": {
+    "lat": 33.17,
+    "lon": 129.73
+  },
+  "JP:oita:oita": {
+    "lat": 33.23,
+    "lon": 131.6
+  },
+  "JP:oitacity:oita": {
+    "lat": 33.23,
+    "lon": 131.6
+  },
+  "JP:hioki:kagoshima": {
+    "lat": 31.58,
+    "lon": 130.35
+  },
+  "JP:hiokicity:kagoshima": {
+    "lat": 31.58,
+    "lon": 130.35
+  },
+  "JP:tarumizu:kagoshima": {
+    "lat": 31.48,
+    "lon": 130.7
+  },
+  "JP:tarumizucity:kagoshima": {
+    "lat": 31.48,
+    "lon": 130.7
+  },
+  "JP:miyazaki:miyazaki": {
+    "lat": 31.92,
+    "lon": 131.42
+  },
+  "JP:miyazakicity:miyazaki": {
+    "lat": 31.92,
+    "lon": 131.42
+  },
+  "JP:miyako:iwate": {
+    "lat": 39.65,
+    "lon": 141.94
+  },
+  "JP:miyakocity:iwate": {
+    "lat": 39.65,
+    "lon": 141.94
+  },
+  "JP:sendai:miyagi": {
+    "lat": 38.27,
+    "lon": 140.87
+  },
+  "JP:sendaicity:miyagi": {
+    "lat": 38.27,
+    "lon": 140.87
+  },
+  "JP:ebetsu:hokkaido": {
+    "lat": 43.11,
+    "lon": 141.55
+  },
+  "JP:ebetsucity:hokkaido": {
+    "lat": 43.11,
+    "lon": 141.55
+  },
+  "JP:kitami:hokkaido": {
+    "lat": 43.8,
+    "lon": 143.89
+  },
+  "JP:kitamicity:hokkaido": {
+    "lat": 43.8,
+    "lon": 143.89
+  },
+  "JP:kanazawa:ishikawa": {
+    "lat": 36.6,
+    "lon": 136.62
+  },
+  "JP:kanazawacity:ishikawa": {
+    "lat": 36.6,
+    "lon": 136.62
+  },
+  "JP:machida:tokyo": {
+    "lat": 35.54,
+    "lon": 139.45
+  },
+  "JP:machidacity:tokyo": {
+    "lat": 35.54,
+    "lon": 139.45
+  },
+  "JP:osaka:osaka": {
+    "lat": 34.69,
+    "lon": 135.5
+  },
+  "JP:osakacity:osaka": {
+    "lat": 34.69,
+    "lon": 135.5
+  },
+  "JP:kure:hiroshima": {
+    "lat": 34.23,
+    "lon": 132.57
+  },
+  "JP:kurecity:hiroshima": {
+    "lat": 34.23,
+    "lon": 132.57
+  },
+  "JP:setochi:okayama": {
+    "lat": 34.66,
+    "lon": 134.14
+  },
+  "JP:setochicity:okayama": {
+    "lat": 34.66,
+    "lon": 134.14
+  },
+  "JP:maniwa:okayama": {
+    "lat": 35.11,
+    "lon": 133.72
+  },
+  "JP:maniwacity:okayama": {
+    "lat": 35.11,
+    "lon": 133.72
+  },
+  "JP:fuchu:hiroshima": {
+    "lat": 34.57,
+    "lon": 133.24
+  },
+  "JP:fuchucity:hiroshima": {
+    "lat": 34.57,
+    "lon": 133.24
+  },
+  "JP:onomichi:hiroshima": {
+    "lat": 34.42,
+    "lon": 133.2
+  },
+  "JP:onomichicity:hiroshima": {
+    "lat": 34.42,
+    "lon": 133.2
+  },
+  "JP:yame:fukuoka": {
+    "lat": 33.23,
+    "lon": 130.65
+  },
+  "JP:yamecity:fukuoka": {
+    "lat": 33.23,
+    "lon": 130.65
+  },
+  "JP:kitakata:fukushima": {
+    "lat": 37.65,
+    "lon": 139.87
+  },
+  "JP:kitakatacity:fukushima": {
+    "lat": 37.65,
+    "lon": 139.87
+  },
+  "JP:tamura:fukushima": {
+    "lat": 37.43,
+    "lon": 140.6
+  },
+  "JP:tamuracity:fukushima": {
+    "lat": 37.43,
+    "lon": 140.6
+  },
+  "JP:hirosaki:aomori": {
+    "lat": 40.59,
+    "lon": 140.47
+  },
+  "JP:hirosakicity:aomori": {
+    "lat": 40.59,
+    "lon": 140.47
+  },
+  "JP:ishinomaki:miyagi": {
+    "lat": 38.42,
+    "lon": 141.3
+  },
+  "JP:ishinomakicity:miyagi": {
+    "lat": 38.42,
+    "lon": 141.3
+  },
+  "JP:fukushima:fukushima": {
+    "lat": 37.75,
+    "lon": 140.47
+  },
+  "JP:fukushimacity:fukushima": {
+    "lat": 37.75,
+    "lon": 140.47
+  },
+  "JP:sukagawa:fukushima": {
+    "lat": 37.28,
+    "lon": 140.38
+  },
+  "JP:sukagawacity:fukushima": {
+    "lat": 37.28,
+    "lon": 140.38
+  },
+  "JP:kuji:iwate": {
+    "lat": 40.19,
+    "lon": 141.77
+  },
+  "JP:kujicity:iwate": {
+    "lat": 40.19,
+    "lon": 141.77
+  },
+  "JP:morioka:iwate": {
+    "lat": 39.7,
+    "lon": 141.15
+  },
+  "JP:moriokacity:iwate": {
+    "lat": 39.7,
+    "lon": 141.15
+  },
+  "JP:shirakawa:fukushima": {
+    "lat": 37.12,
+    "lon": 140.26
+  },
+  "JP:shirakawacity:fukushima": {
+    "lat": 37.12,
+    "lon": 140.26
+  },
+  "JP:yurihonjo:akita": {
+    "lat": 39.39,
+    "lon": 140.06
+  },
+  "JP:yurihonjocity:akita": {
+    "lat": 39.39,
+    "lon": 140.06
+  },
+  "JP:ichinoseki:iwate": {
+    "lat": 38.92,
+    "lon": 141.13
+  },
+  "JP:ichinosekicity:iwate": {
+    "lat": 38.92,
+    "lon": 141.13
+  },
+  "JP:okegawa:saitama": {
+    "lat": 36,
+    "lon": 139.56
+  },
+  "JP:okegawacity:saitama": {
+    "lat": 36,
+    "lon": 139.56
+  },
+  "JP:takahashi:okayama": {
+    "lat": 34.78,
+    "lon": 133.62
+  },
+  "JP:takahashicity:okayama": {
+    "lat": 34.78,
+    "lon": 133.62
+  },
+  "JP:kirishima:kagoshima": {
+    "lat": 31.74,
+    "lon": 130.76
+  },
+  "JP:kirishimacity:kagoshima": {
+    "lat": 31.74,
+    "lon": 130.76
+  },
+  "JP:amami:kagoshima": {
+    "lat": 28.38,
+    "lon": 129.49
+  },
+  "JP:amamicity:kagoshima": {
+    "lat": 28.38,
+    "lon": 129.49
+  },
+  "JP:dazaifu:fukuoka": {
+    "lat": 33.51,
+    "lon": 130.52
+  },
+  "JP:dazaifucity:fukuoka": {
+    "lat": 33.51,
+    "lon": 130.52
+  },
+  "JP:amakusa:kumamoto": {
+    "lat": 32.46,
+    "lon": 130.19
+  },
+  "JP:amakusacity:kumamoto": {
+    "lat": 32.46,
+    "lon": 130.19
+  },
+  "JP:itoman:okinawa": {
+    "lat": 26.13,
+    "lon": 127.67
+  },
+  "JP:itomancity:okinawa": {
+    "lat": 26.13,
+    "lon": 127.67
+  },
+  "JP:fukutsu:fukuoka": {
+    "lat": 33.78,
+    "lon": 130.49
+  },
+  "JP:fukutsucity:fukuoka": {
+    "lat": 33.78,
+    "lon": 130.49
+  },
+  "JP:sabae:fukui": {
+    "lat": 35.95,
+    "lon": 136.18
+  },
+  "JP:sabaecity:fukui": {
+    "lat": 35.95,
+    "lon": 136.18
+  },
+  "JP:ome:tokyo": {
+    "lat": 35.78,
+    "lon": 139.24
+  },
+  "JP:omecity:tokyo": {
+    "lat": 35.78,
+    "lon": 139.24
+  },
+  "JP:nantan:kyoto": {
+    "lat": 35.11,
+    "lon": 135.49
+  },
+  "JP:nantancity:kyoto": {
+    "lat": 35.11,
+    "lon": 135.49
+  },
+  "JP:izumi:osaka": {
+    "lat": 34.48,
+    "lon": 135.43
+  },
+  "JP:izumicity:osaka": {
+    "lat": 34.48,
+    "lon": 135.43
+  },
+  "JP:shobara:hiroshima": {
+    "lat": 34.85,
+    "lon": 133.02
+  },
+  "JP:shobaracity:hiroshima": {
+    "lat": 34.85,
+    "lon": 133.02
+  },
+  "JP:kumamoto:kumamoto": {
+    "lat": 32.81,
+    "lon": 130.69
+  },
+  "JP:kumamotocity:kumamoto": {
+    "lat": 32.81,
+    "lon": 130.69
+  },
+  "JP:itoshima:fukuoka": {
+    "lat": 33.54,
+    "lon": 130.18
+  },
+  "JP:itoshimacity:fukuoka": {
+    "lat": 33.54,
+    "lon": 130.18
+  },
+  "JP:aira:kagoshima": {
+    "lat": 31.77,
+    "lon": 130.59
+  },
+  "JP:airacity:kagoshima": {
+    "lat": 31.77,
+    "lon": 130.59
+  },
+  "JP:kurume:fukuoka": {
+    "lat": 33.32,
+    "lon": 130.52
+  },
+  "JP:kurumecity:fukuoka": {
+    "lat": 33.32,
+    "lon": 130.52
+  },
+  "JP:nogata:fukuoka": {
+    "lat": 33.74,
+    "lon": 130.72
+  },
+  "JP:nogatacity:fukuoka": {
+    "lat": 33.74,
+    "lon": 130.72
+  },
+  "JP:chino:nagano": {
+    "lat": 35.99,
+    "lon": 138.15
+  },
+  "JP:chinocity:nagano": {
+    "lat": 35.99,
+    "lon": 138.15
+  },
+  "JP:sakura:chiba": {
+    "lat": 35.72,
+    "lon": 140.23
+  },
+  "JP:sakuracity:chiba": {
+    "lat": 35.72,
+    "lon": 140.23
+  },
+  "JP:tachikawa:tokyo": {
+    "lat": 35.71,
+    "lon": 139.42
+  },
+  "JP:tachikawacity:tokyo": {
+    "lat": 35.71,
+    "lon": 139.42
+  },
+  "US:atlanta:georgia": {
+    "lat": 33.75,
+    "lon": -84.39
+  },
+  "JP:joyo:kyoto": {
+    "lat": 34.84,
+    "lon": 135.81
+  },
+  "JP:joyocity:kyoto": {
+    "lat": 34.84,
+    "lon": 135.81
+  },
+  "JP:yoshino:nara": {
+    "lat": 34.4,
+    "lon": 135.86
+  },
+  "JP:yoshinogun:nara": {
+    "lat": 34.4,
+    "lon": 135.86
+  },
+  "JP:tamano:okayama": {
+    "lat": 34.52,
+    "lon": 133.95
+  },
+  "JP:tamanocity:okayama": {
+    "lat": 34.52,
+    "lon": 133.95
+  },
+  "JP:toyonaka:osaka": {
+    "lat": 34.78,
+    "lon": 135.47
+  },
+  "JP:toyonakacity:osaka": {
+    "lat": 34.78,
+    "lon": 135.47
+  },
+  "JP:iwakuni:yamaguchi": {
+    "lat": 34.16,
+    "lon": 132.22
+  },
+  "JP:iwakunicity:yamaguchi": {
+    "lat": 34.16,
+    "lon": 132.22
+  },
+  "JP:tama:tokyo": {
+    "lat": 36.3,
+    "lon": 139.12
+  },
+  "JP:tamacity:tokyo": {
+    "lat": 36.3,
+    "lon": 139.12
+  },
+  "JP:ogori:fukuoka": {
+    "lat": 33.39,
+    "lon": 130.55
+  },
+  "JP:ogoricity:fukuoka": {
+    "lat": 33.39,
+    "lon": 130.55
+  },
+  "JP:shimabara:nagasaki": {
+    "lat": 32.78,
+    "lon": 130.37
+  },
+  "JP:shimabaracity:nagasaki": {
+    "lat": 32.78,
+    "lon": 130.37
+  },
+  "JP:isahaya:nagasaki": {
+    "lat": 32.84,
+    "lon": 130.04
+  },
+  "JP:isahayacity:nagasaki": {
+    "lat": 32.84,
+    "lon": 130.04
+  },
+  "JP:goshogawara:aomori": {
+    "lat": 40.8,
+    "lon": 140.44
+  },
+  "JP:goshogawaracity:aomori": {
+    "lat": 40.8,
+    "lon": 140.44
+  },
+  "JP:sapporo:hokkaido": {
+    "lat": 43.07,
+    "lon": 141.35
+  },
+  "JP:sapporocity:hokkaido": {
+    "lat": 43.07,
+    "lon": 141.35
+  },
+  "JP:mombetsu:hokkaido": {
+    "lat": 44.35,
+    "lon": 143.35
+  },
+  "JP:mombetsucity:hokkaido": {
+    "lat": 44.35,
+    "lon": 143.35
+  },
+  "JP:iwamizawa:hokkaido": {
+    "lat": 43.2,
+    "lon": 141.76
+  },
+  "JP:iwamizawacity:hokkaido": {
+    "lat": 43.2,
+    "lon": 141.76
+  },
+  "JP:toda:saitama": {
+    "lat": 35.81,
+    "lon": 139.66
+  },
+  "JP:todacity:saitama": {
+    "lat": 35.81,
+    "lon": 139.66
+  },
+  "JP:inzai:chiba": {
+    "lat": 35.83,
+    "lon": 140.16
+  },
+  "JP:inzaicity:chiba": {
+    "lat": 35.83,
+    "lon": 140.16
+  },
+  "JP:kashiwa:chiba": {
+    "lat": 35.86,
+    "lon": 139.98
+  },
+  "JP:kashiwacity:chiba": {
+    "lat": 35.86,
+    "lon": 139.98
+  },
+  "JP:hanno:saitama": {
+    "lat": 35.85,
+    "lon": 139.32
+  },
+  "JP:hannocity:saitama": {
+    "lat": 35.85,
+    "lon": 139.32
+  },
+  "JP:shizuoka:shizuoka": {
+    "lat": 34.98,
+    "lon": 138.38
+  },
+  "JP:shizuokacity:shizuoka": {
+    "lat": 34.98,
+    "lon": 138.38
+  },
+  "JP:gose:nara": {
+    "lat": 34.45,
+    "lon": 135.73
+  },
+  "JP:gosecity:nara": {
+    "lat": 34.45,
+    "lon": 135.73
+  },
+  "JP:asakuchi:okayama": {
+    "lat": 34.53,
+    "lon": 133.6
+  },
+  "JP:asakuchicity:okayama": {
+    "lat": 34.53,
+    "lon": 133.6
+  },
+  "JP:makurazaki:kagoshima": {
+    "lat": 31.27,
+    "lon": 130.32
+  },
+  "JP:makurazakicity:kagoshima": {
+    "lat": 31.27,
+    "lon": 130.32
+  },
+  "JP:miura:kanagawa": {
+    "lat": 35.14,
+    "lon": 139.62
+  },
+  "JP:miuracity:kanagawa": {
+    "lat": 35.14,
+    "lon": 139.62
+  },
+  "JP:fujinomiya:shizuoka": {
+    "lat": 35.22,
+    "lon": 138.62
+  },
+  "JP:fujinomiyacity:shizuoka": {
+    "lat": 35.22,
+    "lon": 138.62
+  },
+  "JP:toyoashi:aichi": {
+    "lat": 34.77,
+    "lon": 137.38
+  },
+  "JP:toyoashicity:aichi": {
+    "lat": 34.77,
+    "lon": 137.38
+  },
+  "JP:kasugai:aichi": {
+    "lat": 35.25,
+    "lon": 136.97
+  },
+  "JP:kasugaicity:aichi": {
+    "lat": 35.25,
+    "lon": 136.97
+  },
+  "JP:tajimi:gifu": {
+    "lat": 35.32,
+    "lon": 137.13
+  },
+  "JP:tajimicity:gifu": {
+    "lat": 35.32,
+    "lon": 137.13
+  },
+  "JP:yokkaichi:mie": {
+    "lat": 34.97,
+    "lon": 136.62
+  },
+  "JP:yokkaichicity:mie": {
+    "lat": 34.97,
+    "lon": 136.62
+  },
+  "JP:susono:shizuoka": {
+    "lat": 35.17,
+    "lon": 138.91
+  },
+  "JP:susonocity:shizuoka": {
+    "lat": 35.17,
+    "lon": 138.91
+  },
+  "JP:numazu:shizuoka": {
+    "lat": 35.1,
+    "lon": 138.87
+  },
+  "JP:numazucity:shizuoka": {
+    "lat": 35.1,
+    "lon": 138.87
+  },
+  "JP:asahikawa:hokkaido": {
+    "lat": 43.77,
+    "lon": 142.36
+  },
+  "JP:asahikawacity:hokkaido": {
+    "lat": 43.77,
+    "lon": 142.36
+  },
+  "JP:saitama:saitama": {
+    "lat": 35.91,
+    "lon": 139.66
+  },
+  "JP:saitamacity:saitama": {
+    "lat": 35.91,
+    "lon": 139.66
+  },
+  "JP:higashimatsuyama:saitama": {
+    "lat": 36.03,
+    "lon": 139.42
+  },
+  "JP:higashimatsuyamacity:saitama": {
+    "lat": 36.03,
+    "lon": 139.42
+  },
+  "US:sylvania:oio": {
+    "lat": 41.72,
+    "lon": -83.71
+  },
+  "JP:ibaraki:osaka": {
+    "lat": 34.82,
+    "lon": 135.57
+  },
+  "JP:ibarakicity:osaka": {
+    "lat": 34.82,
+    "lon": 135.57
+  },
+  "JP:otsu:shiga": {
+    "lat": 35,
+    "lon": 135.87
+  },
+  "JP:otsucity:shiga": {
+    "lat": 35,
+    "lon": 135.87
+  },
+  "JP:date:fukushima": {
+    "lat": 42.47,
+    "lon": 140.87
+  },
+  "JP:datecity:fukushima": {
+    "lat": 42.47,
+    "lon": 140.87
+  },
+  "JP:hokuto:yamanashi": {
+    "lat": 35.83,
+    "lon": 138.4
+  },
+  "JP:hokutocity:yamanashi": {
+    "lat": 35.83,
+    "lon": 138.4
+  },
+  "JP:konosu:saitama": {
+    "lat": 36.07,
+    "lon": 139.52
+  },
+  "JP:konosucity:saitama": {
+    "lat": 36.07,
+    "lon": 139.52
+  },
+  "JP:sasayama:hyogo": {
+    "lat": 35.07,
+    "lon": 135.22
+  },
+  "JP:sasayamacity:hyogo": {
+    "lat": 35.07,
+    "lon": 135.22
+  },
+  "JP:tsu:mie": {
+    "lat": 34.73,
+    "lon": 136.52
+  },
+  "JP:tsucity:mie": {
+    "lat": 34.73,
+    "lon": 136.52
+  },
+  "JP:hirakata:osaka": {
+    "lat": 34.81,
+    "lon": 135.65
+  },
+  "JP:hirakatacity:osaka": {
+    "lat": 34.81,
+    "lon": 135.65
+  },
+  "JP:noda:chiba": {
+    "lat": 35.95,
+    "lon": 139.87
+  },
+  "JP:nodacity:chiba": {
+    "lat": 35.95,
+    "lon": 139.87
+  },
+  "JP:hachioji:tokyo": {
+    "lat": 35.66,
+    "lon": 139.32
+  },
+  "JP:hachiojicity:tokyo": {
+    "lat": 35.66,
+    "lon": 139.32
+  },
+  "JP:utsunomiya:tochigi": {
+    "lat": 36.57,
+    "lon": 139.88
+  },
+  "JP:utsunomiyacity:tochigi": {
+    "lat": 36.57,
+    "lon": 139.88
+  },
+  "JP:kushiro:hokkaido": {
+    "lat": 42.98,
+    "lon": 144.37
+  },
+  "JP:kushirocity:hokkaido": {
+    "lat": 42.98,
+    "lon": 144.37
+  },
+  "JP:kitaakita:akita": {
+    "lat": 40.2,
+    "lon": 140.39
+  },
+  "JP:kitaakitacity:akita": {
+    "lat": 40.2,
+    "lon": 140.39
+  },
+  "JP:hino:tokyo": {
+    "lat": 35.67,
+    "lon": 139.4
+  },
+  "JP:hinocity:tokyo": {
+    "lat": 35.67,
+    "lon": 139.4
+  },
+  "JP:mitaka:tokyo": {
+    "lat": 35.68,
+    "lon": 139.56
+  },
+  "JP:mitakacity:tokyo": {
+    "lat": 35.68,
+    "lon": 139.56
+  },
+  "JP:akashi:hyogo": {
+    "lat": 34.66,
+    "lon": 135.01
+  },
+  "JP:akashicity:hyogo": {
+    "lat": 34.66,
+    "lon": 135.01
+  },
+  "JP:hekinan:aichi": {
+    "lat": 34.88,
+    "lon": 136.98
+  },
+  "JP:hekinancity:aichi": {
+    "lat": 34.88,
+    "lon": 136.98
+  },
+  "JP:yao:osaka": {
+    "lat": 34.62,
+    "lon": 135.6
+  },
+  "JP:yaocity:osaka": {
+    "lat": 34.62,
+    "lon": 135.6
+  },
+  "JP:kurobe:toyama": {
+    "lat": 36.9,
+    "lon": 137.45
+  },
+  "JP:kurobecity:toyama": {
+    "lat": 36.9,
+    "lon": 137.45
+  },
+  "JP:omachi:nagano": {
+    "lat": 36.5,
+    "lon": 137.87
+  },
+  "JP:omachicity:nagano": {
+    "lat": 36.5,
+    "lon": 137.87
+  },
+  "JP:kai:yamanashi": {
+    "lat": 35.68,
+    "lon": 138.51
+  },
+  "JP:kaicity:yamanashi": {
+    "lat": 35.68,
+    "lon": 138.51
+  },
+  "JP:mito:ibaraki": {
+    "lat": 36.35,
+    "lon": 140.45
+  },
+  "JP:mitocity:ibaraki": {
+    "lat": 36.35,
+    "lon": 140.45
+  },
+  "JP:kamogawa:chiba": {
+    "lat": 35.1,
+    "lon": 140.1
+  },
+  "JP:kamogawacity:chiba": {
+    "lat": 35.1,
+    "lon": 140.1
+  },
+  "JP:hashima:gifu": {
+    "lat": 35.33,
+    "lon": 136.68
+  },
+  "JP:hashimagun:gifu": {
+    "lat": 35.33,
+    "lon": 136.68
+  },
+  "JP:shibata:miyagi": {
+    "lat": 37.95,
+    "lon": 139.33
+  },
+  "JP:shibatagun:miyagi": {
+    "lat": 37.95,
+    "lon": 139.33
+  },
+  "JP:matsumoto:nagano": {
+    "lat": 36.23,
+    "lon": 137.97
+  },
+  "JP:matsumotocity:nagano": {
+    "lat": 36.23,
+    "lon": 137.97
+  },
+  "JP:komoro:nagano": {
+    "lat": 36.32,
+    "lon": 138.43
+  },
+  "JP:komorocity:nagano": {
+    "lat": 36.32,
+    "lon": 138.43
+  },
+  "JP:nagakute:aichi": {
+    "lat": 35.17,
+    "lon": 137.06
+  },
+  "JP:nagakutecity:aichi": {
+    "lat": 35.17,
+    "lon": 137.06
+  },
+  "JP:matsuyama:ehime": {
+    "lat": 33.84,
+    "lon": 132.77
+  },
+  "JP:matsuyamacity:ehime": {
+    "lat": 33.84,
+    "lon": 132.77
+  },
+  "JP:kochi:kochi": {
+    "lat": 33.55,
+    "lon": 133.53
+  },
+  "JP:kochicity:kochi": {
+    "lat": 33.55,
+    "lon": 133.53
+  },
+  "JP:nago:okinawa": {
+    "lat": 26.62,
+    "lon": 127.99
+  },
+  "JP:nagocity:okinawa": {
+    "lat": 26.62,
+    "lon": 127.99
+  },
+  "JP:higashimatsushima:miyagi": {
+    "lat": 38.41,
+    "lon": 141.18
+  },
+  "JP:higashimatsushimacity:miyagi": {
+    "lat": 38.41,
+    "lon": 141.18
+  },
+  "JP:chigasaki:kanagawa": {
+    "lat": 35.34,
+    "lon": 139.4
+  },
+  "JP:chigasakicity:kanagawa": {
+    "lat": 35.34,
+    "lon": 139.4
+  },
+  "JP:asaka:saitama": {
+    "lat": 35.8,
+    "lon": 139.6
+  },
+  "JP:asakacity:saitama": {
+    "lat": 35.8,
+    "lon": 139.6
+  },
+  "JP:nasushiobara:tochigi": {
+    "lat": 36.98,
+    "lon": 139.99
+  },
+  "JP:nasushiobaracity:tochigi": {
+    "lat": 36.98,
+    "lon": 139.99
+  },
+  "JP:mishima:shizuoka": {
+    "lat": 35.12,
+    "lon": 138.92
+  },
+  "JP:mishimacity:shizuoka": {
+    "lat": 35.12,
+    "lon": 138.92
+  },
+  "JP:atami:shizuoka": {
+    "lat": 35.09,
+    "lon": 139.05
+  },
+  "JP:atamicity:shizuoka": {
+    "lat": 35.09,
+    "lon": 139.05
+  },
+  "US:goldendale:washington": {
+    "lat": 45.82,
+    "lon": -120.82
+  },
+  "US:northrichlandhills:texas": {
+    "lat": 32.83,
+    "lon": -97.23
+  },
+  "US:grandrapids:minnesota": {
+    "lat": 47.24,
+    "lon": -93.53
+  },
+  "US:kansas:missori": {
+    "lat": 39.1,
+    "lon": -94.58
+  },
+  "US:kansascity:missori": {
+    "lat": 39.1,
+    "lon": -94.58
+  },
+  "US:olathe:kansas": {
+    "lat": 38.88,
+    "lon": -94.82
+  },
+  "US:custer:sothdakota": {
+    "lat": 43.77,
+    "lon": -103.6
+  },
+  "US:chillicothe:missori": {
+    "lat": 39.8,
+    "lon": -93.55
+  },
+  "US:leclaire:iowa": {
+    "lat": 41.6,
+    "lon": -90.34
+  },
+  "US:leessummit:missori": {
+    "lat": 38.91,
+    "lon": -94.38
+  },
+  "US:lincoln:nebraska": {
+    "lat": 40.8,
+    "lon": -96.67
+  },
+  "US:fargo:northdakota": {
+    "lat": 46.88,
+    "lon": -96.79
+  },
+  "US:pittsburg:kansas": {
+    "lat": 37.41,
+    "lon": -94.7
+  },
+  "US:dickinson:northdakota": {
+    "lat": 46.88,
+    "lon": -102.79
+  },
+  "US:dracut:massachusetts": {
+    "lat": 42.67,
+    "lon": -71.3
+  },
+  "US:salem:newhampshire": {
+    "lat": 44.94,
+    "lon": -123.04
+  },
+  "US:eastfalmoth:massachusetts": {
+    "lat": 41.58,
+    "lon": -70.56
+  },
+  "US:longbeach:newyork": {
+    "lat": 40.59,
+    "lon": -73.66
+  },
+  "US:daytonabeach:florida": {
+    "lat": 29.21,
+    "lon": -81.02
+  },
+  "US:tintonfalls:newjersey": {
+    "lat": 40.3,
+    "lon": -74.1
+  },
+  "US:franklinville:newjersey": {
+    "lat": 42.34,
+    "lon": -78.46
+  },
+  "US:ellicott:maryland": {
+    "lat": 39.27,
+    "lon": -76.8
+  },
+  "US:ellicottcity:maryland": {
+    "lat": 39.27,
+    "lon": -76.8
+  },
+  "US:knoxville:maryland": {
+    "lat": 35.96,
+    "lon": -83.92
+  },
+  "US:newkensington:pennsylvania": {
+    "lat": 40.57,
+    "lon": -79.76
+  },
+  "US:philadelphia:pennsylvania": {
+    "lat": 39.95,
+    "lon": -75.16
+  },
+  "US:montgomery:alabama": {
+    "lat": 32.37,
+    "lon": -86.3
+  },
+  "US:carrollton:georgia": {
+    "lat": 33.58,
+    "lon": -85.08
+  },
+  "US:navarre:florida": {
+    "lat": 30.4,
+    "lon": -86.86
+  },
+  "US:springhill:florida": {
+    "lat": 28.48,
+    "lon": -82.53
+  },
+  "US:dade:florida": {
+    "lat": 28.36,
+    "lon": -82.2
+  },
+  "US:dadecity:florida": {
+    "lat": 28.36,
+    "lon": -82.2
+  },
+  "US:knoxville:tennessee": {
+    "lat": 35.96,
+    "lon": -83.92
+  },
+  "US:fredericksburg:virginia": {
+    "lat": 38.3,
+    "lon": -77.46
+  },
+  "US:nashville:tennessee": {
+    "lat": 36.17,
+    "lon": -86.78
+  },
+  "US:murray:kentucky": {
+    "lat": 36.61,
+    "lon": -88.31
+  },
+  "US:columbia:kentucky": {
+    "lat": 37.1,
+    "lon": -85.31
+  },
+  "US:fortworth:texas": {
+    "lat": 32.73,
+    "lon": -97.32
+  },
+  "US:duncan:oklahoma": {
+    "lat": 34.5,
+    "lon": -97.96
+  },
+  "US:corpuschristi:texas": {
+    "lat": 27.8,
+    "lon": -97.4
+  },
+  "US:farmersville:texas": {
+    "lat": 33.16,
+    "lon": -96.36
+  },
+  "US:clinton:oklahoma": {
+    "lat": 35.52,
+    "lon": -98.97
+  },
+  "US:mansfield:texas": {
+    "lat": 32.56,
+    "lon": -97.14
+  },
+  "US:minden:loisiana": {
+    "lat": 32.62,
+    "lon": -93.29
+  },
+  "US:pflugerville:texas": {
+    "lat": 30.44,
+    "lon": -97.62
+  },
+  "US:burbank:california": {
+    "lat": 34.18,
+    "lon": -118.31
+  },
+  "US:westcovina:california": {
+    "lat": 34.07,
+    "lon": -117.94
+  },
+  "US:ranchocucamonga:california": {
+    "lat": 34.11,
+    "lon": -117.59
+  },
+  "US:sothlaketahoe:california": {
+    "lat": 38.93,
+    "lon": -119.98
+  },
+  "US:elkgrove:california": {
+    "lat": 38.41,
+    "lon": -121.37
+  },
+  "US:taft:california": {
+    "lat": 35.14,
+    "lon": -119.46
+  },
+  "US:discoverybay:california": {
+    "lat": 37.91,
+    "lon": -121.6
+  },
+  "US:dallas:texas": {
+    "lat": 32.78,
+    "lon": -96.81
+  },
+  "US:pomona:california": {
+    "lat": 34.06,
+    "lon": -117.75
+  },
+  "US:chinoills:california": {
+    "lat": 33.99,
+    "lon": -117.76
+  },
+  "US:galt:california": {
+    "lat": 38.25,
+    "lon": -121.3
+  },
+  "US:twinfalls:idaho": {
+    "lat": 42.56,
+    "lon": -114.46
+  },
+  "US:simpsonville:kentucky": {
+    "lat": 38.22,
+    "lon": -85.36
+  },
+  "US:santanvalley:arizona": {
+    "lat": 33.19,
+    "lon": -111.53
+  },
+  "US:shelton:washington": {
+    "lat": 47.22,
+    "lon": -123.1
+  },
+  "US:wickenburg:arizona": {
+    "lat": 33.97,
+    "lon": -112.73
+  },
+  "US:gilbert:arizona": {
+    "lat": 33.35,
+    "lon": -111.79
+  },
+  "US:chandler:arizona": {
+    "lat": 33.31,
+    "lon": -111.84
+  },
+  "US:lasvegas:nevada": {
+    "lat": 36.17,
+    "lon": -115.14
+  },
+  "US:lincoln:oregon": {
+    "lat": 44.96,
+    "lon": -124.02
+  },
+  "US:lincolncity:oregon": {
+    "lat": 44.96,
+    "lon": -124.02
+  },
+  "US:vail:arizona": {
+    "lat": 32.05,
+    "lon": -110.71
+  },
+  "US:lagrande:oregon": {
+    "lat": 45.32,
+    "lon": -118.09
+  },
+  "US:fairmont:westvirginia": {
+    "lat": 39.49,
+    "lon": -80.14
+  },
+  "US:gladwin:michigan": {
+    "lat": 43.98,
+    "lon": -84.49
+  },
+  "US:severnapark:maryland": {
+    "lat": 39.07,
+    "lon": -76.55
+  },
+  "US:kalamazo:michigan": {
+    "lat": 42.29,
+    "lon": -85.59
+  },
+  "US:wendell:idaho": {
+    "lat": 42.78,
+    "lon": -114.7
+  },
+  "US:lancaster:oio": {
+    "lat": 39.71,
+    "lon": -82.6
+  },
+  "US:cincinnati:oio": {
+    "lat": 39.13,
+    "lon": -84.51
+  },
+  "US:buckhannon:westvirginia": {
+    "lat": 38.99,
+    "lon": -80.23
+  },
+  "US:kalkaska:michigan": {
+    "lat": 44.73,
+    "lon": -85.18
+  },
+  "US:ofallon:illinois": {
+    "lat": 38.59,
+    "lon": -89.91
+  },
+  "US:ingleside:illinois": {
+    "lat": 27.88,
+    "lon": -97.21
+  },
+  "US:greenbay:wisconsin": {
+    "lat": 44.52,
+    "lon": -88.02
+  },
+  "US:escondido:california": {
+    "lat": 33.12,
+    "lon": -117.09
+  },
+  "US:oakisland:northcarolina": {
+    "lat": 33.92,
+    "lon": -78.16
+  },
+  "US:murphysboro:illinois": {
+    "lat": 37.76,
+    "lon": -89.34
+  },
+  "US:waxahachie:texas": {
+    "lat": 32.39,
+    "lon": -96.85
+  },
+  "US:peoria:illinois": {
+    "lat": 40.69,
+    "lon": -89.59
+  },
+  "US:montainview:arkansas": {
+    "lat": 35.87,
+    "lon": -92.12
+  },
+  "US:sayre:pennsylvania": {
+    "lat": 41.98,
+    "lon": -76.52
+  },
+  "US:cuero:texas": {
+    "lat": 29.09,
+    "lon": -97.29
+  },
+  "US:vanburen:arkansas": {
+    "lat": 35.44,
+    "lon": -94.35
+  },
+  "US:collierville:tennessee": {
+    "lat": 35.04,
+    "lon": -89.66
+  },
+  "US:wheeling:westvirginia": {
+    "lat": 40.06,
+    "lon": -80.72
+  },
+  "US:ripon:wisconsin": {
+    "lat": 43.84,
+    "lon": -88.84
+  },
+  "US:huntley:illinois": {
+    "lat": 42.17,
+    "lon": -88.43
+  },
+  "US:gridley:illinois": {
+    "lat": 40.74,
+    "lon": -88.88
+  },
+  "US:sanfrancisco:california": {
+    "lat": 37.77,
+    "lon": -122.42
+  },
+  "US:coloradosprings:colorado": {
+    "lat": 38.83,
+    "lon": -104.82
+  },
+  "US:creston:iowa": {
+    "lat": 41.06,
+    "lon": -94.36
+  },
+  "US:concilbluffs:iowa": {
+    "lat": 41.26,
+    "lon": -95.86
+  },
+  "US:imperial:missori": {
+    "lat": 38.37,
+    "lon": -90.38
+  },
+  "US:sun:arizona": {
+    "lat": 33.6,
+    "lon": -112.27
+  },
+  "US:suncity:arizona": {
+    "lat": 33.6,
+    "lon": -112.27
+  },
+  "US:pembroke:newhampshire": {
+    "lat": 43.15,
+    "lon": -71.46
+  },
+  "US:conshoocken:pennsylvania": {
+    "lat": 40.08,
+    "lon": -75.3
+  },
+  "US:bunnell:florida": {
+    "lat": 29.47,
+    "lon": -81.26
+  },
+  "US:bardstown:kentucky": {
+    "lat": 37.81,
+    "lon": -85.47
+  },
+  "US:williamsburg:kentucky": {
+    "lat": 36.74,
+    "lon": -84.16
+  },
+  "US:marrero:loisiana": {
+    "lat": 29.9,
+    "lon": -90.1
+  },
+  "US:neworleans:loisiana": {
+    "lat": 29.95,
+    "lon": -90.08
+  },
+  "US:cleburne:texas": {
+    "lat": 32.35,
+    "lon": -97.39
+  },
+  "US:sheboyganfalls:wisconsin": {
+    "lat": 43.73,
+    "lon": -87.82
+  },
+  "US:vancover:washington": {
+    "lat": 45.64,
+    "lon": -122.66
+  },
+  "US:toledo:oio": {
+    "lat": 41.66,
+    "lon": -83.56
+  },
+  "US:germantownhills:illinois": {
+    "lat": 40.77,
+    "lon": -89.47
+  },
+  "US:connersville:indiana": {
+    "lat": 39.64,
+    "lon": -85.14
+  },
+  "US:borbonnais:illinois": {
+    "lat": 41.15,
+    "lon": -87.89
+  },
+  "US:overlandpark:kansas": {
+    "lat": 38.98,
+    "lon": -94.67
+  },
+  "US:belton:missori": {
+    "lat": 38.81,
+    "lon": -94.53
+  },
+  "US:cranston:rhodeisland": {
+    "lat": 41.78,
+    "lon": -71.44
+  },
+  "US:framingham:massachusetts": {
+    "lat": 42.28,
+    "lon": -71.42
+  },
+  "US:lisbonfalls:maine": {
+    "lat": 44,
+    "lon": -70.06
+  },
+  "US:horseheads:newyork": {
+    "lat": 42.17,
+    "lon": -76.82
+  },
+  "US:neptune:newjersey": {
+    "lat": 40.2,
+    "lon": -74.03
+  },
+  "US:dansville:newyork": {
+    "lat": 42.56,
+    "lon": -77.7
+  },
+  "US:orlando:florida": {
+    "lat": 28.54,
+    "lon": -81.38
+  },
+  "US:claymont:delaware": {
+    "lat": 39.8,
+    "lon": -75.46
+  },
+  "US:berwick:pennsylvania": {
+    "lat": 41.05,
+    "lon": -76.23
+  },
+  "US:royersford:pennsylvania": {
+    "lat": 40.18,
+    "lon": -75.54
+  },
+  "US:manassas:virginia": {
+    "lat": 38.75,
+    "lon": -77.48
+  },
+  "US:crestwod:kentucky": {
+    "lat": 38.32,
+    "lon": -85.47
+  },
+  "US:burleson:texas": {
+    "lat": 32.54,
+    "lon": -97.32
+  },
+  "US:westmonroe:loisiana": {
+    "lat": 32.52,
+    "lon": -92.15
+  },
+  "US:billings:montana": {
+    "lat": 45.78,
+    "lon": -108.5
+  },
+  "US:norway:michigan": {
+    "lat": 45.79,
+    "lon": -87.9
+  },
+  "US:muskegon:michigan": {
+    "lat": 43.23,
+    "lon": -86.25
+  },
+  "US:meridian:idaho": {
+    "lat": 43.61,
+    "lon": -116.39
+  },
+  "US:fredonia:wisconsin": {
+    "lat": 43.47,
+    "lon": -87.95
+  },
+  "US:canby:minnesota": {
+    "lat": 44.71,
+    "lon": -96.28
+  },
+  "US:buffalo:minnesota": {
+    "lat": 45.17,
+    "lon": -93.87
+  },
+  "US:aspen:colorado": {
+    "lat": 39.19,
+    "lon": -106.82
+  },
+  "US:elkhorn:nebraska": {
+    "lat": 41.29,
+    "lon": -96.23
+  },
+  "US:pueblowest:colorado": {
+    "lat": 38.35,
+    "lon": -104.72
+  },
+  "US:sibley:iowa": {
+    "lat": 43.4,
+    "lon": -95.75
+  },
+  "US:denver:colorado": {
+    "lat": 39.74,
+    "lon": -104.98
+  },
+  "US:saintclod:minnesota": {
+    "lat": 45.56,
+    "lon": -94.16
+  },
+  "US:greatneck:newyork": {
+    "lat": 40.8,
+    "lon": -73.73
+  },
+  "US:friendswod:texas": {
+    "lat": 29.53,
+    "lon": -95.2
+  },
+  "US:northlasvegas:nevada": {
+    "lat": 36.2,
+    "lon": -115.12
+  },
+  "US:canton:michigan": {
+    "lat": 42.31,
+    "lon": -83.48
+  },
+  "US:columbus:oio": {
+    "lat": 39.96,
+    "lon": -83
+  },
+  "US:gahanna:oio": {
+    "lat": 40.02,
+    "lon": -82.88
+  },
+  "US:orrville:oio": {
+    "lat": 40.84,
+    "lon": -81.76
+  },
+  "US:princeton:illinois": {
+    "lat": 41.37,
+    "lon": -89.46
+  },
+  "US:weston:wisconsin": {
+    "lat": 44.89,
+    "lon": -89.55
+  },
+  "US:yorkville:illinois": {
+    "lat": 41.64,
+    "lon": -88.45
+  },
+  "US:onalaska:wisconsin": {
+    "lat": 43.88,
+    "lon": -91.24
+  },
+  "US:michigan:indiana": {
+    "lat": 41.71,
+    "lon": -86.9
+  },
+  "US:michigancity:indiana": {
+    "lat": 41.71,
+    "lon": -86.9
+  },
+  "US:lakevillage:indiana": {
+    "lat": 33.33,
+    "lon": -91.28
+  },
+  "US:lafayette:indiana": {
+    "lat": 40.42,
+    "lon": -86.88
+  },
+  "US:carthage:illinois": {
+    "lat": 40.42,
+    "lon": -91.14
+  },
+  "US:clinton:iowa": {
+    "lat": 41.84,
+    "lon": -90.19
+  },
+  "US:limon:colorado": {
+    "lat": 39.26,
+    "lon": -103.69
+  },
+  "US:wheatridge:colorado": {
+    "lat": 39.77,
+    "lon": -105.08
+  },
+  "US:glenmont:newyork": {
+    "lat": 39.06,
+    "lon": -77.05
+  },
+  "US:hemet:california": {
+    "lat": 33.75,
+    "lon": -116.97
+  },
+  "US:bennington:idaho": {
+    "lat": 42.88,
+    "lon": -73.2
+  },
+  "US:findlay:oio": {
+    "lat": 41.04,
+    "lon": -83.65
+  },
+  "US:ashland:oio": {
+    "lat": 40.87,
+    "lon": -82.32
+  },
+  "US:westchicago:illinois": {
+    "lat": 41.88,
+    "lon": -88.2
+  },
+  "US:northliberty:iowa": {
+    "lat": 41.75,
+    "lon": -91.6
+  },
+  "US:detroitlakes:minnesota": {
+    "lat": 46.82,
+    "lon": -95.85
+  },
+  "US:waco:texas": {
+    "lat": 31.55,
+    "lon": -97.15
+  },
+  "US:claremont:nevada": {
+    "lat": 34.1,
+    "lon": -117.72
+  },
+  "US:athens:tennessee": {
+    "lat": 35.44,
+    "lon": -84.59
+  },
+  "US:union:tennessee": {
+    "lat": 36.42,
+    "lon": -89.06
+  },
+  "US:unioncity:tennessee": {
+    "lat": 36.42,
+    "lon": -89.06
+  },
+  "US:brentwod:tennessee": {
+    "lat": 36.03,
+    "lon": -86.78
+  },
+  "US:victoria:texas": {
+    "lat": 28.81,
+    "lon": -97
+  },
+  "US:league:texas": {
+    "lat": 29.51,
+    "lon": -95.09
+  },
+  "US:leaguecity:texas": {
+    "lat": 29.51,
+    "lon": -95.09
+  },
+  "US:farmersbranch:texas": {
+    "lat": 32.93,
+    "lon": -96.9
+  },
+  "US:porthueneme:california": {
+    "lat": 34.15,
+    "lon": -119.2
+  },
+  "US:coeurdalene:idaho": {
+    "lat": 47.68,
+    "lon": -116.78
+  },
+  "US:tacoma:washington": {
+    "lat": 47.25,
+    "lon": -122.44
+  },
+  "US:tucson:arizona": {
+    "lat": 32.22,
+    "lon": -110.93
+  },
+  "US:paris:texas": {
+    "lat": 33.66,
+    "lon": -95.56
+  },
+  "US:powderly:texas": {
+    "lat": 33.81,
+    "lon": -95.52
+  },
+  "US:kingfisher:oklahoma": {
+    "lat": 35.86,
+    "lon": -97.93
+  },
+  "US:missori:texas": {
+    "lat": 29.62,
+    "lon": -95.54
+  },
+  "US:california:california": {
+    "lat": 35.13,
+    "lon": -117.99
+  },
+  "US:castrovalley:california": {
+    "lat": 37.69,
+    "lon": -122.09
+  },
+  "US:bend:oregon": {
+    "lat": 44.06,
+    "lon": -121.32
+  },
+  "US:salem:oregon": {
+    "lat": 44.94,
+    "lon": -123.04
+  },
+  "US:redding:california": {
+    "lat": 40.59,
+    "lon": -122.39
+  },
+  "US:longview:washington": {
+    "lat": 46.14,
+    "lon": -122.94
+  },
+  "US:uniontown:kentucky": {
+    "lat": 39.9,
+    "lon": -79.72
+  },
+  "US:bradenton:florida": {
+    "lat": 27.5,
+    "lon": -82.57
+  },
+  "US:hoston:texas": {
+    "lat": 29.76,
+    "lon": -95.36
+  },
+  "US:gonzales:loisiana": {
+    "lat": 30.24,
+    "lon": -90.92
+  },
+  "US:ontario:california": {
+    "lat": 34.06,
+    "lon": -117.65
+  },
+  "US:chinok:montana": {
+    "lat": 48.59,
+    "lon": -109.23
+  },
+  "US:antelope:california": {
+    "lat": 38.71,
+    "lon": -121.33
+  },
+  "US:losalamitos:california": {
+    "lat": 33.8,
+    "lon": -118.07
+  },
+  "US:belfair:washington": {
+    "lat": 47.45,
+    "lon": -122.83
+  },
+  "US:fairbanks:alaska": {
+    "lat": 64.84,
+    "lon": -147.72
+  },
+  "US:centralpoint:oregon": {
+    "lat": 42.38,
+    "lon": -122.92
+  },
+  "US:walnutcreek:california": {
+    "lat": 37.91,
+    "lon": -122.06
+  },
+  "US:nampa:idaho": {
+    "lat": 43.54,
+    "lon": -116.56
+  },
+  "JP:minamiashigara:kanagawa": {
+    "lat": 35.32,
+    "lon": 139.11
+  },
+  "JP:minamiashigaracity:kanagawa": {
+    "lat": 35.32,
+    "lon": 139.11
+  },
+  "US:reading:pennsylvania": {
+    "lat": 40.34,
+    "lon": -75.93
+  },
+  "US:springhill:tennessee": {
+    "lat": 35.75,
+    "lon": -86.93
+  },
+  "US:conover:northcarolina": {
+    "lat": 35.71,
+    "lon": -81.22
+  },
+  "US:hickory:northcarolina": {
+    "lat": 35.73,
+    "lon": -81.34
+  },
+  "US:chesapeake:virginia": {
+    "lat": 36.82,
+    "lon": -76.27
+  },
+  "US:dadeville:alabama": {
+    "lat": 32.83,
+    "lon": -85.76
+  },
+  "US:windsor:california": {
+    "lat": 38.55,
+    "lon": -122.82
+  },
+  "US:lamirada:california": {
+    "lat": 33.92,
+    "lon": -118.01
+  },
+  "US:clovis:california": {
+    "lat": 36.83,
+    "lon": -119.7
+  },
+  "US:palmcoast:florida": {
+    "lat": 29.58,
+    "lon": -81.21
+  },
+  "US:phenix:alabama": {
+    "lat": 32.47,
+    "lon": -85
+  },
+  "US:phenixcity:alabama": {
+    "lat": 32.47,
+    "lon": -85
+  },
+  "US:havelock:northcarolina": {
+    "lat": 34.88,
+    "lon": -76.9
+  },
+  "US:santarosa:california": {
+    "lat": 38.44,
+    "lon": -122.71
+  },
+  "US:corona:california": {
+    "lat": 33.88,
+    "lon": -117.57
+  },
+  "US:brownsburg:indiana": {
+    "lat": 39.84,
+    "lon": -86.4
+  },
+  "US:selma:alabama": {
+    "lat": 32.41,
+    "lon": -87.02
+  },
+  "US:lenoir:tennessee": {
+    "lat": 35.8,
+    "lon": -84.26
+  },
+  "US:lenoircity:tennessee": {
+    "lat": 35.8,
+    "lon": -84.26
+  },
+  "US:kingman:arizona": {
+    "lat": 35.19,
+    "lon": -114.05
+  },
+  "US:phippsburg:maine": {
+    "lat": 43.82,
+    "lon": -69.81
+  },
+  "JP:uji:kyoto": {
+    "lat": 34.89,
+    "lon": 135.8
+  },
+  "JP:ujicity:kyoto": {
+    "lat": 34.89,
+    "lon": 135.8
+  },
+  "US:valrico:florida": {
+    "lat": 27.94,
+    "lon": -82.24
+  },
+  "JP:mitoyo:kagawa": {
+    "lat": 34.21,
+    "lon": 133.67
+  },
+  "JP:mitoyocity:kagawa": {
+    "lat": 34.21,
+    "lon": 133.67
+  },
+  "US:magnolia:kentucky": {
+    "lat": 33.27,
+    "lon": -93.24
+  },
+  "US:leander:texas": {
+    "lat": 30.58,
+    "lon": -97.85
+  },
+  "US:lakehavasu:arizona": {
+    "lat": 34.48,
+    "lon": -114.32
+  },
+  "US:lakehavasucity:arizona": {
+    "lat": 34.48,
+    "lon": -114.32
+  },
+  "US:glasgow:kentucky": {
+    "lat": 37,
+    "lon": -85.91
+  },
+  "NO:grimstad:agder": {
+    "lat": 58.34,
+    "lon": 8.59
+  },
+  "US:henderson:nevada": {
+    "lat": 36.04,
+    "lon": -114.98
+  },
+  "US:myrtlebeach:sothcarolina": {
+    "lat": 33.69,
+    "lon": -78.89
+  },
+  "US:traverse:michigan": {
+    "lat": 44.76,
+    "lon": -85.62
+  },
+  "US:traversecity:michigan": {
+    "lat": 44.76,
+    "lon": -85.62
+  },
+  "AR:mardelplata:buenosaires": {
+    "lat": -38,
+    "lon": -57.56
+  },
+  "AR:pinamar:buenosaires": {
+    "lat": -37.11,
+    "lon": -56.86
+  },
+  "AR:buenosaires:caba": {
+    "lat": -34.61,
+    "lon": -58.38
+  },
+  "AR:concepciondeluruguay:entrerios": {
+    "lat": -32.48,
+    "lon": -58.23
+  },
+  "AR:lanus:buenosaires": {
+    "lat": -34.7,
+    "lon": -58.4
+  },
+  "GB:stafford:staffordshire": {
+    "lat": 52.81,
+    "lon": -2.12
+  },
+  "GB:reading:berkshire": {
+    "lat": 51.46,
+    "lon": -0.97
+  },
+  "GB:rugby:westmidlands": {
+    "lat": 52.37,
+    "lon": -1.26
+  },
+  "GB:dudley:westmidlands": {
+    "lat": 52.5,
+    "lon": -2.08
+  },
+  "GB:tamworth:staffordshire": {
+    "lat": 52.63,
+    "lon": -1.7
+  },
+  "GB:hatfield:hertfordshire": {
+    "lat": 51.76,
+    "lon": -0.22
+  },
+  "GB:grimsby:lincolnshire": {
+    "lat": 53.57,
+    "lon": -0.08
+  },
+  "US:helena:arkansas": {
+    "lat": 34.53,
+    "lon": -90.59
+  },
+  "GB:annan:dumfriesandgalloway": {
+    "lat": 54.99,
+    "lon": -3.26
+  },
+  "GB:wigan:lancashire": {
+    "lat": 53.54,
+    "lon": -2.64
+  },
+  "GB:ellesmereport:cheshire": {
+    "lat": 53.28,
+    "lon": -2.9
+  },
+  "GB:suttoninashfield:nottinghamshire": {
+    "lat": 53.13,
+    "lon": -1.26
+  },
+  "GB:hemelhempstead:hertfordshire": {
+    "lat": 51.75,
+    "lon": -0.45
+  },
+  "GB:miltonkeynes:buckinghamshire": {
+    "lat": 52.04,
+    "lon": -0.76
+  },
+  "GB:cradleyheath:westmidlands": {
+    "lat": 52.47,
+    "lon": -2.08
+  },
+  "GB:porthmadog:gwynedd": {
+    "lat": 52.93,
+    "lon": -4.13
+  },
+  "GB:ringwod:hampshire": {
+    "lat": 50.85,
+    "lon": -1.79
+  },
+  "GB:shrewsbury:shropshire": {
+    "lat": 52.71,
+    "lon": -2.75
+  },
+  "GB:tangmere:westsussex": {
+    "lat": 50.85,
+    "lon": -0.72
+  },
+  "GB:sheffield:sothyorkshire": {
+    "lat": 53.38,
+    "lon": -1.47
+  },
+  "GB:corsham:wiltshiretowns": {
+    "lat": 51.43,
+    "lon": -2.18
+  },
+  "GB:wetherby:westyorkshire": {
+    "lat": 53.93,
+    "lon": -1.39
+  },
+  "GB:worcester:herefordandworcester": {
+    "lat": 52.19,
+    "lon": -2.22
+  },
+  "GB:maybole:ayrshire": {
+    "lat": 55.36,
+    "lon": -4.68
+  },
+  "ES:badajoz:extremadura": {
+    "lat": 38.88,
+    "lon": -6.97
+  },
+  "US:chulavista:california": {
+    "lat": 32.64,
+    "lon": -117.08
+  },
+  "GB:blackwod:caerphilly": {
+    "lat": 51.67,
+    "lon": -3.21
+  },
+  "GB:cardiff:merthyrtydfil": {
+    "lat": 51.48,
+    "lon": -3.18
+  },
+  "US:centennial:colorado": {
+    "lat": 39.58,
+    "lon": -104.88
+  },
+  "US:paducah:kentucky": {
+    "lat": 37.08,
+    "lon": -88.6
+  },
+  "US:saintpeter:minnesota": {
+    "lat": 44.32,
+    "lon": -93.96
+  },
+  "US:springhill:kansas": {
+    "lat": 38.74,
+    "lon": -94.83
+  },
+  "US:chariton:iowa": {
+    "lat": 41.01,
+    "lon": -93.31
+  },
+  "US:duluth:minnesota": {
+    "lat": 46.78,
+    "lon": -92.11
+  },
+  "US:twoarbors:minnesota": {
+    "lat": 47.02,
+    "lon": -91.67
+  },
+  "US:scottsbluff:nebraska": {
+    "lat": 41.87,
+    "lon": -103.67
+  },
+  "US:prattville:alabama": {
+    "lat": 32.46,
+    "lon": -86.46
+  },
+  "US:holden:massachusetts": {
+    "lat": 42.35,
+    "lon": -71.86
+  },
+  "US:sothdennis:massachusetts": {
+    "lat": 41.69,
+    "lon": -70.16
+  },
+  "US:seminole:florida": {
+    "lat": 27.84,
+    "lon": -82.79
+  },
+  "US:laconia:newhampshire": {
+    "lat": 43.53,
+    "lon": -71.47
+  },
+  "US:augusta:maine": {
+    "lat": 44.31,
+    "lon": -69.78
+  },
+  "US:newdurham:newhampshire": {
+    "lat": 43.44,
+    "lon": -71.17
+  },
+  "US:chester:newhampshire": {
+    "lat": 39.85,
+    "lon": -75.36
+  },
+  "US:oxford:maine": {
+    "lat": 44.13,
+    "lon": -70.49
+  },
+  "US:naples:florida": {
+    "lat": 26.14,
+    "lon": -81.8
+  },
+  "US:hopkinsville:kentucky": {
+    "lat": 36.87,
+    "lon": -87.49
+  },
+  "US:lansdale:pennsylvania": {
+    "lat": 40.24,
+    "lon": -75.28
+  },
+  "US:elmira:newyork": {
+    "lat": 42.09,
+    "lon": -76.81
+  },
+  "US:grandjunction:colorado": {
+    "lat": 39.06,
+    "lon": -108.55
+  },
+  "US:milliken:colorado": {
+    "lat": 40.33,
+    "lon": -104.86
+  },
+  "US:torrance:california": {
+    "lat": 33.84,
+    "lon": -118.34
+  },
+  "US:swarthmore:pennsylvania": {
+    "lat": 39.9,
+    "lon": -75.35
+  },
+  "US:allentown:pennsylvania": {
+    "lat": 40.61,
+    "lon": -75.49
+  },
+  "US:greenville:sothcarolina": {
+    "lat": 34.85,
+    "lon": -82.39
+  },
+  "US:powhatan:virginia": {
+    "lat": 37.54,
+    "lon": -77.92
+  },
+  "US:bowlinggreen:kentucky": {
+    "lat": 36.99,
+    "lon": -86.44
+  },
+  "US:elizabeth:northcarolina": {
+    "lat": 36.29,
+    "lon": -76.25
+  },
+  "US:elizabethcity:northcarolina": {
+    "lat": 36.29,
+    "lon": -76.25
+  },
+  "US:bentonville:arkansas": {
+    "lat": 36.37,
+    "lon": -94.21
+  },
+  "US:oklahoma:oklahoma": {
+    "lat": 35.47,
+    "lon": -97.52
+  },
+  "US:oklahomacity:oklahoma": {
+    "lat": 35.47,
+    "lon": -97.52
+  },
+  "US:springfield:missori": {
+    "lat": 37.22,
+    "lon": -93.3
+  },
+  "US:keller:texas": {
+    "lat": 32.93,
+    "lon": -97.25
+  },
+  "US:sulphursprings:texas": {
+    "lat": 33.14,
+    "lon": -95.6
+  },
+  "US:ranchocordova:california": {
+    "lat": 38.59,
+    "lon": -121.3
+  },
+  "US:westjordan:utah": {
+    "lat": 40.61,
+    "lon": -111.94
+  },
+  "US:flagstaff:arizona": {
+    "lat": 35.2,
+    "lon": -111.65
+  },
+  "US:sanpedro:california": {
+    "lat": 33.74,
+    "lon": -118.29
+  },
+  "US:daly:california": {
+    "lat": 37.71,
+    "lon": -122.46
+  },
+  "US:dalycity:california": {
+    "lat": 37.71,
+    "lon": -122.46
+  },
+  "US:bontiful:utah": {
+    "lat": 40.89,
+    "lon": -111.88
+  },
+  "US:corvallis:oregon": {
+    "lat": 44.56,
+    "lon": -123.26
+  },
+  "US:greatfalls:montana": {
+    "lat": 47.5,
+    "lon": -111.3
+  },
+  "US:grayling:michigan": {
+    "lat": 44.66,
+    "lon": -84.71
+  },
+  "US:hopkins:michigan": {
+    "lat": 44.92,
+    "lon": -93.46
+  },
+  "US:beavercreek:oio": {
+    "lat": 39.71,
+    "lon": -84.06
+  },
+  "US:westchester:oio": {
+    "lat": 25.75,
+    "lon": -80.33
+  },
+  "US:hesperia:michigan": {
+    "lat": 34.43,
+    "lon": -117.3
+  },
+  "US:saintalbans:westvirginia": {
+    "lat": 38.39,
+    "lon": -81.84
+  },
+  "US:lewiscenter:oio": {
+    "lat": 40.2,
+    "lon": -83.01
+  },
+  "US:fremont:wisconsin": {
+    "lat": 37.55,
+    "lon": -121.99
+  },
+  "US:martinsville:indiana": {
+    "lat": 39.43,
+    "lon": -86.43
+  },
+  "US:greenfield:indiana": {
+    "lat": 39.79,
+    "lon": -85.77
+  },
+  "US:linton:indiana": {
+    "lat": 39.03,
+    "lon": -87.17
+  },
+  "US:greentown:indiana": {
+    "lat": 40.48,
+    "lon": -85.97
+  },
+  "US:westmont:illinois": {
+    "lat": 41.8,
+    "lon": -87.98
+  },
+  "US:kenosha:wisconsin": {
+    "lat": 42.58,
+    "lon": -87.82
+  },
+  "US:dimondale:michigan": {
+    "lat": 42.65,
+    "lon": -84.65
+  },
+  "US:hayward:wisconsin": {
+    "lat": 46.01,
+    "lon": -91.48
+  },
+  "US:freeport:illinois": {
+    "lat": 42.3,
+    "lon": -89.62
+  },
+  "US:auburn:indiana": {
+    "lat": 41.37,
+    "lon": -85.06
+  },
+  "US:streamwod:illinois": {
+    "lat": 42.03,
+    "lon": -88.18
+  },
+  "US:columbus:montana": {
+    "lat": 45.64,
+    "lon": -109.25
+  },
+  "US:jamestown:northdakota": {
+    "lat": 46.91,
+    "lon": -98.71
+  },
+  "US:lakeland:florida": {
+    "lat": 28.04,
+    "lon": -81.95
+  },
+  "US:pinegrove:california": {
+    "lat": 38.41,
+    "lon": -120.66
+  },
+  "JP:myoko:niigata": {
+    "lat": 37.01,
+    "lon": 138.27
+  },
+  "JP:myokocity:niigata": {
+    "lat": 37.01,
+    "lon": 138.27
+  },
+  "US:martinsville:newjersey": {
+    "lat": 40.6,
+    "lon": -74.56
+  },
+  "US:elkton:sothdakota": {
+    "lat": 39.61,
+    "lon": -75.83
+  },
+  "JP:komagane:nagano": {
+    "lat": 35.72,
+    "lon": 137.94
+  },
+  "JP:komaganecity:nagano": {
+    "lat": 35.72,
+    "lon": 137.94
+  },
+  "US:astoria:oregon": {
+    "lat": 46.19,
+    "lon": -123.83
+  },
+  "US:newbraunfels:texas": {
+    "lat": 29.7,
+    "lon": -98.12
+  },
+  "US:mendon:illinois": {
+    "lat": 42.11,
+    "lon": -71.55
+  },
+  "US:fallschurch:virginia": {
+    "lat": 38.88,
+    "lon": -77.17
+  },
+  "AT:lienz:tirol": {
+    "lat": 46.83,
+    "lon": 12.77
+  },
+  "FI:kotka:kymenlaakso": {
+    "lat": 60.47,
+    "lon": 26.95
+  },
+  "JP:bungono:oita": {
+    "lat": 32.97,
+    "lon": 131.53
+  },
+  "JP:bungonocity:oita": {
+    "lat": 32.97,
+    "lon": 131.53
+  },
+  "JP:fujiidera:osaka": {
+    "lat": 34.57,
+    "lon": 135.6
+  },
+  "JP:fujiideracity:osaka": {
+    "lat": 34.57,
+    "lon": 135.6
+  },
+  "JP:hannan:osaka": {
+    "lat": 34.33,
+    "lon": 135.25
+  },
+  "JP:hannancity:osaka": {
+    "lat": 34.33,
+    "lon": 135.25
+  },
+  "JP:takatsuki:osaka": {
+    "lat": 34.85,
+    "lon": 135.62
+  },
+  "JP:takatsukicity:osaka": {
+    "lat": 34.85,
+    "lon": 135.62
+  },
+  "JP:sakai:osaka": {
+    "lat": 34.58,
+    "lon": 135.47
+  },
+  "JP:sakaicity:osaka": {
+    "lat": 34.58,
+    "lon": 135.47
+  },
+  "DK:faaborg:syddanmark": {
+    "lat": 55.1,
+    "lon": 10.24
+  },
+  "DK:randers:centraljutland": {
+    "lat": 56.46,
+    "lon": 10.04
+  },
+  "NL:amstelveen:northholland": {
+    "lat": 52.3,
+    "lon": 4.86
+  },
+  "RU:korolev:moscow": {
+    "lat": 55.91,
+    "lon": 37.83
+  },
+  "NL:steenwijk:overijssel": {
+    "lat": 52.79,
+    "lon": 6.12
+  },
+  "CW:willemstad:caribbean": {
+    "lat": 12.11,
+    "lon": -68.93
+  },
+  "RU:moscow:moscow": {
+    "lat": 55.75,
+    "lon": 37.62
+  },
+  "RU:temryuk:krasnodarkrai": {
+    "lat": 45.27,
+    "lon": 37.39
+  },
+  "RU:barnaul:altai": {
+    "lat": 53.36,
+    "lon": 83.76
+  },
+  "US:newcastle:colorado": {
+    "lat": 39.57,
+    "lon": -107.54
+  },
+  "SI:postojna:littoralinnercarniola": {
+    "lat": 45.77,
+    "lon": 14.22
+  },
+  "JP:koka:shiga": {
+    "lat": 34.98,
+    "lon": 136.16
+  },
+  "JP:kokacity:shiga": {
+    "lat": 34.98,
+    "lon": 136.16
+  },
+  "SE:rimforsa:ostergotland": {
+    "lat": 58.14,
+    "lon": 15.69
+  },
+  "JP:yasugi:shimane": {
+    "lat": 35.42,
+    "lon": 133.24
+  },
+  "JP:yasugicity:shimane": {
+    "lat": 35.42,
+    "lon": 133.24
+  },
+  "US:sanclemente:california": {
+    "lat": 33.43,
+    "lon": -117.61
+  },
+  "PL:bedzin:sl": {
+    "lat": 50.33,
+    "lon": 19.13
+  },
+  "JP:kawagoe:saitama": {
+    "lat": 35.91,
+    "lon": 139.49
+  },
+  "JP:kawagoecity:saitama": {
+    "lat": 35.91,
+    "lon": 139.49
+  },
+  "JP:sayama:saitama": {
+    "lat": 35.85,
+    "lon": 139.41
+  },
+  "JP:sayamacity:saitama": {
+    "lat": 35.85,
+    "lon": 139.41
+  },
+  "JP:yoshikawa:saitama": {
+    "lat": 35.89,
+    "lon": 139.84
+  },
+  "JP:yoshikawacity:saitama": {
+    "lat": 35.89,
+    "lon": 139.84
+  },
+  "JP:fujimino:saitama": {
+    "lat": 35.86,
+    "lon": 139.52
+  },
+  "JP:fujiminocity:saitama": {
+    "lat": 35.86,
+    "lon": 139.52
+  },
+  "US:dallesport:washington": {
+    "lat": 45.62,
+    "lon": -121.18
+  },
+  "GR:kalamata:messenia": {
+    "lat": 37.04,
+    "lon": 22.11
+  },
+  "US:evansville:indiana": {
+    "lat": 37.97,
+    "lon": -87.56
+  },
+  "US:haubstadt:indiana": {
+    "lat": 38.21,
+    "lon": -87.57
+  },
+  "JP:otawara:tochigi": {
+    "lat": 36.87,
+    "lon": 140.03
+  },
+  "JP:otawaracity:tochigi": {
+    "lat": 36.87,
+    "lon": 140.03
+  },
+  "JP:fussa:tokyo": {
+    "lat": 35.74,
+    "lon": 139.32
+  },
+  "JP:fussacity:tokyo": {
+    "lat": 35.74,
+    "lon": 139.32
+  },
+  "JP:yonago:tottori": {
+    "lat": 35.43,
+    "lon": 133.33
+  },
+  "JP:yonagocity:tottori": {
+    "lat": 35.43,
+    "lon": 133.33
+  },
+  "RU:kirov:kirov": {
+    "lat": 58.6,
+    "lon": 49.66
+  },
+  "US:sidney:maine": {
+    "lat": 44.41,
+    "lon": -69.73
+  },
+  "JP:uonuma:niigata": {
+    "lat": 37.24,
+    "lon": 138.96
+  },
+  "JP:uonumacity:niigata": {
+    "lat": 37.24,
+    "lon": 138.96
+  },
+  "US:brownstown:illinois": {
+    "lat": 38.88,
+    "lon": -86.04
+  },
+  "CA:rimoski:quebec": {
+    "lat": 48.45,
+    "lon": -68.52
+  },
+  "CA:toronto:ontario": {
+    "lat": 43.7,
+    "lon": -79.42
+  },
+  "CA:newmarket:ontario": {
+    "lat": 44.05,
+    "lon": -79.47
+  },
+  "CA:carletonplace:ontario": {
+    "lat": 45.13,
+    "lon": -76.15
+  },
+  "CA:thepas:manitoba": {
+    "lat": 53.83,
+    "lon": -101.25
+  },
+  "CA:glacebay:novascotia": {
+    "lat": 46.2,
+    "lon": -59.96
+  },
+  "CA:parrsboro:novascotia": {
+    "lat": 45.41,
+    "lon": -64.33
+  },
+  "CA:quebec:quebec": {
+    "lat": 46.81,
+    "lon": -71.21
+  },
+  "CA:saintpascal:quebec": {
+    "lat": 47.52,
+    "lon": -69.8
+  },
+  "CA:montjoli:quebec": {
+    "lat": 48.58,
+    "lon": -68.19
+  },
+  "CA:roynnoranda:quebec": {
+    "lat": 48.24,
+    "lon": -79.02
+  },
+  "CA:princeville:quebec": {
+    "lat": 46.17,
+    "lon": -71.87
+  },
+  "CA:granby:quebec": {
+    "lat": 45.4,
+    "lon": -72.73
+  },
+  "CA:troisrivieres:quebec": {
+    "lat": 46.35,
+    "lon": -72.55
+  },
+  "CA:london:ontario": {
+    "lat": 42.98,
+    "lon": -81.23
+  },
+  "CA:oshawa:ontario": {
+    "lat": 43.9,
+    "lon": -78.85
+  },
+  "CA:cornwall:ontario": {
+    "lat": 45.02,
+    "lon": -74.73
+  },
+  "CA:thunderbay:ontario": {
+    "lat": 48.38,
+    "lon": -89.25
+  },
+  "CA:kenora:ontario": {
+    "lat": 49.77,
+    "lon": -94.49
+  },
+  "CA:regina:saskatchewan": {
+    "lat": 50.45,
+    "lon": -104.62
+  },
+  "CA:martensville:saskatchewan": {
+    "lat": 52.28,
+    "lon": -106.67
+  },
+  "CA:edmonton:alberta": {
+    "lat": 53.55,
+    "lon": -113.47
+  },
+  "CA:lethbridge:alberta": {
+    "lat": 49.7,
+    "lon": -112.82
+  },
+  "CA:calgary:alberta": {
+    "lat": 51.05,
+    "lon": -114.09
+  },
+  "CA:surrey:britishcolumbia": {
+    "lat": 49.11,
+    "lon": -122.83
+  },
+  "CA:terrace:britishcolumbia": {
+    "lat": 54.52,
+    "lon": -128.6
+  },
+  "CA:princegeorge:britishcolumbia": {
+    "lat": 53.92,
+    "lon": -122.75
+  },
+  "CA:vernon:britishcolumbia": {
+    "lat": 50.03,
+    "lon": -126.36
+  },
+  "CA:kamlops:britishcolumbia": {
+    "lat": 50.67,
+    "lon": -120.32
+  },
+  "CA:nanaimo:britishcolumbia": {
+    "lat": 49.17,
+    "lon": -123.94
+  },
+  "CA:delta:britishcolumbia": {
+    "lat": 49.14,
+    "lon": -122.91
+  },
+  "CA:penticton:britishcolumbia": {
+    "lat": 49.48,
+    "lon": -119.59
+  },
+  "CA:pittmeadows:britishcolumbia": {
+    "lat": 49.22,
+    "lon": -122.69
+  },
+  "AU:bradbury:newsothwales": {
+    "lat": -34.09,
+    "lon": 150.82
+  },
+  "AU:westballina:newsothwales": {
+    "lat": -28.86,
+    "lon": 153.53
+  },
+  "AU:hillside:victoria": {
+    "lat": -37.69,
+    "lon": 144.74
+  },
+  "AU:melborne:victoria": {
+    "lat": -37.81,
+    "lon": 144.96
+  },
+  "AU:wodonga:victoria": {
+    "lat": -36.12,
+    "lon": 146.89
+  },
+  "AU:buderim:queensland": {
+    "lat": -26.68,
+    "lon": 153.06
+  },
+  "AU:capalaba:queensland": {
+    "lat": -27.54,
+    "lon": 153.2
+  },
+  "AU:waikerie:sothaustralia": {
+    "lat": -34.18,
+    "lon": 139.99
+  },
+  "AU:kingston:tasmania": {
+    "lat": -27.67,
+    "lon": 153.12
+  },
+  "AU:darwin:northernterritory": {
+    "lat": -12.46,
+    "lon": 130.84
+  },
+  "IN:pune:maharastra": {
+    "lat": 18.52,
+    "lon": 73.86
+  },
+  "CA:springbrok:princeedwardisland": {
+    "lat": 52.18,
+    "lon": -113.88
+  },
+  "US:holden:missori": {
+    "lat": 38.71,
+    "lon": -93.99
+  },
+  "US:nevada:missori": {
+    "lat": 37.84,
+    "lon": -94.35
+  },
+  "US:stacy:minnesota": {
+    "lat": 45.4,
+    "lon": -92.99
+  },
+  "US:eagan:minnesota": {
+    "lat": 44.8,
+    "lon": -93.17
+  },
+  "US:rochester:minnesota": {
+    "lat": 44.02,
+    "lon": -92.47
+  },
+  "US:norfolk:nebraska": {
+    "lat": 42.03,
+    "lon": -97.42
+  },
+  "US:stlois:missori": {
+    "lat": 38.63,
+    "lon": -90.2
+  },
+  "US:littleton:colorado": {
+    "lat": 39.61,
+    "lon": -105.02
+  },
+  "US:golden:colorado": {
+    "lat": 39.76,
+    "lon": -105.22
+  },
+  "US:nisswa:minnesota": {
+    "lat": 46.52,
+    "lon": -94.29
+  },
+  "US:ironton:minnesota": {
+    "lat": 38.54,
+    "lon": -82.68
+  },
+  "US:crosslake:minnesota": {
+    "lat": 46.66,
+    "lon": -94.11
+  },
+  "US:derby:kansas": {
+    "lat": 37.55,
+    "lon": -97.27
+  },
+  "US:windsor:colorado": {
+    "lat": 40.48,
+    "lon": -104.9
+  },
+  "US:marshall:minnesota": {
+    "lat": 44.45,
+    "lon": -95.79
+  },
+  "US:sioxfalls:sothdakota": {
+    "lat": 43.55,
+    "lon": -96.7
+  },
+  "US:glocester:massachusetts": {
+    "lat": 42.61,
+    "lon": -70.66
+  },
+  "US:newington:connecticut": {
+    "lat": 41.7,
+    "lon": -72.72
+  },
+  "US:uncasville:connecticut": {
+    "lat": 41.43,
+    "lon": -72.11
+  },
+  "US:whitinsville:massachusetts": {
+    "lat": 42.11,
+    "lon": -71.67
+  },
+  "US:asheville:northcarolina": {
+    "lat": 35.6,
+    "lon": -82.55
+  },
+  "US:fortcollins:colorado": {
+    "lat": 40.59,
+    "lon": -105.08
+  },
+  "US:owego:newyork": {
+    "lat": 42.1,
+    "lon": -76.26
+  },
+  "US:succasunna:newjersey": {
+    "lat": 40.87,
+    "lon": -74.64
+  },
+  "US:farmingville:newyork": {
+    "lat": 40.83,
+    "lon": -73.03
+  },
+  "US:thevillages:florida": {
+    "lat": 28.93,
+    "lon": -81.96
+  },
+  "US:bellevue:nebraska": {
+    "lat": 41.14,
+    "lon": -95.89
+  },
+  "US:hagerstown:maryland": {
+    "lat": 39.64,
+    "lon": -77.72
+  },
+  "US:seaford:delaware": {
+    "lat": 40.67,
+    "lon": -73.49
+  },
+  "US:hillsborogh:northcarolina": {
+    "lat": 36.08,
+    "lon": -79.1
+  },
+  "US:durham:northcarolina": {
+    "lat": 35.99,
+    "lon": -78.9
+  },
+  "US:harvest:alabama": {
+    "lat": 34.86,
+    "lon": -86.75
+  },
+  "US:sarasota:florida": {
+    "lat": 27.34,
+    "lon": -82.53
+  },
+  "US:florence:alabama": {
+    "lat": 34.8,
+    "lon": -87.68
+  },
+  "US:horsecave:kentucky": {
+    "lat": 37.18,
+    "lon": -85.91
+  },
+  "US:bayminette:alabama": {
+    "lat": 30.88,
+    "lon": -87.77
+  },
+  "US:wodward:oklahoma": {
+    "lat": 36.43,
+    "lon": -99.39
+  },
+  "US:tyler:texas": {
+    "lat": 32.35,
+    "lon": -95.3
+  },
+  "US:clovis:newmexico": {
+    "lat": 34.4,
+    "lon": -103.21
+  },
+  "US:wynne:arkansas": {
+    "lat": 35.22,
+    "lon": -90.79
+  },
+  "US:greenbrier:arkansas": {
+    "lat": 35.23,
+    "lon": -92.39
+  },
+  "US:salem:arkansas": {
+    "lat": 34.63,
+    "lon": -92.56
+  },
+  "US:amarillo:texas": {
+    "lat": 35.22,
+    "lon": -101.83
+  },
+  "US:stinnett:texas": {
+    "lat": 35.83,
+    "lon": -101.44
+  },
+  "US:portlavaca:texas": {
+    "lat": 28.62,
+    "lon": -96.63
+  },
+  "US:blanchard:oklahoma": {
+    "lat": 35.14,
+    "lon": -97.66
+  },
+  "US:denton:texas": {
+    "lat": 33.21,
+    "lon": -97.13
+  },
+  "US:leesville:loisiana": {
+    "lat": 31.14,
+    "lon": -93.26
+  },
+  "US:baytown:texas": {
+    "lat": 29.74,
+    "lon": -94.98
+  },
+  "US:homa:loisiana": {
+    "lat": 29.6,
+    "lon": -90.72
+  },
+  "US:montshasta:california": {
+    "lat": 41.31,
+    "lon": -122.31
+  },
+  "US:oceanside:california": {
+    "lat": 33.2,
+    "lon": -117.38
+  },
+  "US:auburn:california": {
+    "lat": 38.9,
+    "lon": -121.08
+  },
+  "US:riverside:california": {
+    "lat": 33.95,
+    "lon": -117.4
+  },
+  "US:lancaster:california": {
+    "lat": 34.7,
+    "lon": -118.14
+  },
+  "US:paradise:california": {
+    "lat": 39.76,
+    "lon": -121.62
+  },
+  "US:flowermond:texas": {
+    "lat": 33.01,
+    "lon": -97.1
+  },
+  "US:fremont:california": {
+    "lat": 37.55,
+    "lon": -121.99
+  },
+  "US:sandiego:california": {
+    "lat": 32.72,
+    "lon": -117.16
+  },
+  "US:payson:arizona": {
+    "lat": 34.23,
+    "lon": -111.33
+  },
+  "US:showlow:arizona": {
+    "lat": 34.25,
+    "lon": -110.03
+  },
+  "US:ogden:utah": {
+    "lat": 41.22,
+    "lon": -111.97
+  },
+  "US:richmond:missori": {
+    "lat": 39.28,
+    "lon": -93.98
+  },
+  "US:scottsdale:arizona": {
+    "lat": 33.51,
+    "lon": -111.9
+  },
+  "US:reno:nevada": {
+    "lat": 39.53,
+    "lon": -119.81
+  },
+  "US:lakeport:michigan": {
+    "lat": 39.04,
+    "lon": -122.92
+  },
+  "US:bellbrok:oio": {
+    "lat": 39.64,
+    "lon": -84.07
+  },
+  "US:clintontownship:michigan": {
+    "lat": 42.59,
+    "lon": -82.92
+  },
+  "US:eastlansing:michigan": {
+    "lat": 42.74,
+    "lon": -84.48
+  },
+  "US:fremont:oio": {
+    "lat": 41.35,
+    "lon": -83.12
+  },
+  "US:montsterling:oio": {
+    "lat": 39.72,
+    "lon": -83.27
+  },
+  "US:maricopa:arizona": {
+    "lat": 33.06,
+    "lon": -112.05
+  },
+  "US:grandrapids:michigan": {
+    "lat": 42.96,
+    "lon": -85.67
+  },
+  "US:sothcharleston:westvirginia": {
+    "lat": 38.37,
+    "lon": -81.7
+  },
+  "US:blomer:wisconsin": {
+    "lat": 45.1,
+    "lon": -91.49
+  },
+  "US:lacrosse:wisconsin": {
+    "lat": 43.8,
+    "lon": -91.24
+  },
+  "US:decatur:alabama": {
+    "lat": 34.61,
+    "lon": -86.98
+  },
+  "US:manitowoc:wisconsin": {
+    "lat": 44.09,
+    "lon": -87.66
+  },
+  "US:groveland:illinois": {
+    "lat": 28.56,
+    "lon": -81.85
+  },
+  "US:avon:indiana": {
+    "lat": 39.76,
+    "lon": -86.4
+  },
+  "US:hempstead:newyork": {
+    "lat": 40.71,
+    "lon": -73.62
+  },
+  "US:macungie:pennsylvania": {
+    "lat": 40.52,
+    "lon": -75.56
+  },
+  "US:buford:georgia": {
+    "lat": 34.12,
+    "lon": -84
+  },
+  "US:moavevalley:arizona": {
+    "lat": 34.93,
+    "lon": -114.59
+  },
+  "US:westlinn:oregon": {
+    "lat": 45.37,
+    "lon": -122.61
+  },
+  "US:logan:utah": {
+    "lat": 41.74,
+    "lon": -111.83
+  },
+  "US:saranac:michigan": {
+    "lat": 42.93,
+    "lon": -85.21
+  },
+  "US:superior:wisconsin": {
+    "lat": 46.72,
+    "lon": -92.1
+  },
+  "US:lesueur:minnesota": {
+    "lat": 44.46,
+    "lon": -93.92
+  },
+  "US:owensboro:kentucky": {
+    "lat": 37.77,
+    "lon": -87.11
+  },
+  "US:omaha:nebraska": {
+    "lat": 41.26,
+    "lon": -95.94
+  },
+  "US:malverne:newyork": {
+    "lat": 40.68,
+    "lon": -73.67
+  },
+  "US:smyrna:delaware": {
+    "lat": 33.88,
+    "lon": -84.51
+  },
+  "US:clewiston:florida": {
+    "lat": 26.75,
+    "lon": -80.93
+  },
+  "US:leesburg:virginia": {
+    "lat": 39.12,
+    "lon": -77.56
+  },
+  "US:vanwert:oio": {
+    "lat": 40.87,
+    "lon": -84.58
+  },
+  "US:bartow:florida": {
+    "lat": 27.9,
+    "lon": -81.84
+  },
+  "US:rochesterhills:michigan": {
+    "lat": 42.66,
+    "lon": -83.15
+  },
+  "US:madison:wisconsin": {
+    "lat": 43.07,
+    "lon": -89.4
+  },
+  "US:greenwod:indiana": {
+    "lat": 39.61,
+    "lon": -86.11
+  },
+  "US:cameron:missori": {
+    "lat": 39.74,
+    "lon": -94.24
+  },
+  "US:wodbridge:virginia": {
+    "lat": 38.66,
+    "lon": -77.25
+  },
+  "US:harlingen:texas": {
+    "lat": 26.19,
+    "lon": -97.7
+  },
+  "US:arlington:texas": {
+    "lat": 32.74,
+    "lon": -97.11
+  },
+  "US:mondsville:westvirginia": {
+    "lat": 39.92,
+    "lon": -80.74
+  },
+  "US:newboston:michigan": {
+    "lat": 42.98,
+    "lon": -71.69
+  },
+  "US:nevada:california": {
+    "lat": 39.26,
+    "lon": -121.02
+  },
+  "US:nevadacity:california": {
+    "lat": 39.26,
+    "lon": -121.02
+  },
+  "US:batavia:oio": {
+    "lat": 39.08,
+    "lon": -84.18
+  },
+  "US:lakeview:michigan": {
+    "lat": 42.3,
+    "lon": -85.21
+  },
+  "US:smithfield:virginia": {
+    "lat": 36.98,
+    "lon": -76.63
+  },
+  "US:virginiabeach:virginia": {
+    "lat": 36.85,
+    "lon": -75.98
+  },
+  "US:williamsburg:virginia": {
+    "lat": 37.27,
+    "lon": -76.71
+  },
+  "US:glocester:virginia": {
+    "lat": 42.61,
+    "lon": -70.66
+  },
+  "US:prescottvalley:arizona": {
+    "lat": 34.61,
+    "lon": -112.32
+  },
+  "US:stoneham:massachusetts": {
+    "lat": 42.48,
+    "lon": -71.1
+  },
+  "US:spokane:washington": {
+    "lat": 47.66,
+    "lon": -117.43
+  },
+  "US:roxana:delaware": {
+    "lat": 38.85,
+    "lon": -90.08
+  },
+  "US:mobile:alabama": {
+    "lat": 30.69,
+    "lon": -88.04
+  },
+  "US:culloden:westvirginia": {
+    "lat": 38.42,
+    "lon": -82.06
+  },
+  "US:huntsville:alabama": {
+    "lat": 34.73,
+    "lon": -86.59
+  },
+  "US:marietta:texas": {
+    "lat": 33.95,
+    "lon": -84.55
+  },
+  "US:raytown:missori": {
+    "lat": 39.01,
+    "lon": -94.46
+  },
+  "JP:ube:yamaguchi": {
+    "lat": 33.94,
+    "lon": 131.25
+  },
+  "JP:ubecity:yamaguchi": {
+    "lat": 33.94,
+    "lon": 131.25
+  },
+  "JP:kofu:yamanashi": {
+    "lat": 35.67,
+    "lon": 138.57
+  },
+  "JP:kofucity:yamanashi": {
+    "lat": 35.67,
+    "lon": 138.57
+  },
+  "RO:turda:cluj": {
+    "lat": 46.57,
+    "lon": 23.78
+  },
+  "RO:radauti:suceava": {
+    "lat": 47.85,
+    "lon": 25.92
+  },
+  "JP:sakata:yamagata": {
+    "lat": 38.92,
+    "lon": 139.85
+  },
+  "JP:sakatacity:yamagata": {
+    "lat": 38.92,
+    "lon": 139.85
+  },
+  "JP:yamagata:yamagata": {
+    "lat": 38.23,
+    "lon": 140.37
+  },
+  "JP:yamagatacity:yamagata": {
+    "lat": 38.23,
+    "lon": 140.37
+  },
+  "RS:novisad:vojvodina": {
+    "lat": 45.25,
+    "lon": 19.84
+  },
+  "NZ:auckland:auckland": {
+    "lat": -36.85,
+    "lon": 174.76
+  },
+  "NZ:hamilton:glenview": {
+    "lat": -37.78,
+    "lon": 175.28
+  }
+}
