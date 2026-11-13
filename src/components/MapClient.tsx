@@ -79,6 +79,8 @@ export default function MapPage() {
     const [locationLoading, setLocationLoading] = useState(true);
     const [locationError, setLocationError] = useState<string | null>(null);
     const [distanceFilter, setDistanceFilter] = useState<number>(100); // km
+    const [missingCityFilter, setMissingCityFilter] = useState("");
+    const [missingCountryFilter, setMissingCountryFilter] = useState("");
 
     // GPS位置情報を取得
     const getGPSLocation = () => {
@@ -180,7 +182,10 @@ export default function MapPage() {
                 const lon = parseCoordinate(node.lon);
 
                 if (lat !== null && lon !== null) {
-                    return { node, lat, lon };
+                    return { node, lat, lon, approx: false };
+                }
+                if (node.approx) {
+                    return { node, ...node.approx, approx: true };
                 }
                 return null;
             })
@@ -192,9 +197,27 @@ export default function MapPage() {
                     node: WiresNode;
                     lat: number;
                     lon: number;
+                    approx: boolean;
                 } => item !== null
             );
     }, [nodes]);
+
+    const nodesWithoutLocation = useMemo(
+        () =>
+            nodes.filter(
+                (node) =>
+                    !node.lat &&
+                    !node.lon &&
+                    !node.approx &&
+                    (!missingCountryFilter ||
+                        node.country === missingCountryFilter) &&
+                    (!missingCityFilter ||
+                        node.city
+                            .toLowerCase()
+                            .includes(missingCityFilter.toLowerCase()))
+            ),
+        [nodes, missingCityFilter, missingCountryFilter]
+    );
 
     // 座標がある有効なノードのみ（国・種別フィルタ適用後）
     const validNodes = useMemo(() => {
@@ -398,6 +421,7 @@ export default function MapPage() {
                                         </div>
                                         {userLocation && (
                                             <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                                                {item.approx && "概算 "}
                                                 {item.distance.toFixed(0)} km
                                             </span>
                                         )}
@@ -430,6 +454,56 @@ export default function MapPage() {
                     </div>
                 </div>
             </div>
+
+            <details className="bg-white rounded-lg shadow-md p-4 mb-6">
+                <summary className="cursor-pointer font-bold">
+                    位置情報なし（{nodesWithoutLocation.length}件）
+                </summary>
+                <div className="mt-4 flex flex-wrap gap-3">
+                    <input
+                        type="search"
+                        value={missingCityFilter}
+                        onChange={(e) => setMissingCityFilter(e.target.value)}
+                        placeholder="市区町村で絞り込み"
+                        className="px-3 py-2 border border-gray-300 rounded-lg"
+                    />
+                    <select
+                        value={missingCountryFilter}
+                        onChange={(e) =>
+                            setMissingCountryFilter(e.target.value)
+                        }
+                        className="px-3 py-2 border border-gray-300 rounded-lg"
+                    >
+                        <option value="">All Countries</option>
+                        {countries.map((country) => (
+                            <option key={country} value={country}>
+                                {country}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="mt-4 max-h-80 overflow-y-auto">
+                    {nodesWithoutLocation.length === 0 ? (
+                        <p className="text-sm text-gray-600">
+                            該当するノードはありません。
+                        </p>
+                    ) : (
+                        <ul className="divide-y divide-gray-200">
+                            {nodesWithoutLocation.map((node, index) => (
+                                <li
+                                    key={`${node.dtmf_id}-${node.call_sign}-${index}`}
+                                    className="py-2 text-sm"
+                                >
+                                    <span className="font-semibold">
+                                        {node.call_sign}
+                                    </span>{" "}
+                                    — {node.city}, {node.country}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            </details>
 
             {selectedNode && (
                 <div
@@ -496,6 +570,11 @@ export default function MapPage() {
                                 <br />
                                 Lon: {selectedNode.lon}
                             </div>
+                            {selectedNode.approx && (
+                                <p className="text-sm text-amber-700">
+                                    概略位置（市区町村レベル）です。局の正確な位置を示すものではありません。
+                                </p>
+                            )}
                             {selectedNode.comment && (
                                 <div>
                                     <span className="font-semibold">
