@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { fetchWithFallback, sourceHeaders } from "@/utils/yaesu";
+import { findApproxCoordinate } from "@/utils/cityCoordinates";
 
 export interface WiresNode {
     id: string;
@@ -14,6 +15,10 @@ export interface WiresNode {
     lat: string;
     lon: string;
     comment: string;
+    approx?: {
+        lat: number;
+        lon: number;
+    };
     distance?: number;
 }
 
@@ -54,7 +59,18 @@ export async function GET() {
             );
         }
 
-        return NextResponse.json(result.data, {
+        const nodes = result.data.map((node) => {
+            if (node.lat || node.lon) return node;
+
+            const approx = findApproxCoordinate(
+                node.city,
+                node.country,
+                node.state
+            );
+            return approx ? { ...node, approx } : node;
+        });
+
+        return NextResponse.json(nodes, {
             headers: sourceHeaders(result),
         });
     } catch (error) {

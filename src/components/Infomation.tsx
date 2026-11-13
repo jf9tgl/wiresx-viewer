@@ -8,8 +8,8 @@ export default function Infomation() {
         {
             title: "おしらせ",
             content: "現在公式サイトがセキュリティ問題の対処のため停止しています。過去のデータを使用しているためデータが古い可能性がありますご注意ください。",
-        }
-    ]
+        },
+    ];
 
     if (infos.length === 0) {
         return;

@@ -20,6 +20,14 @@ const analogIcon = L.icon({
     popupAnchor: [0, -30],
 });
 
+const approximateIcon = L.divIcon({
+    className: "",
+    html: '<div style="width:30px;height:30px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 1px 5px #666;color:white;font-weight:bold;text-align:center;line-height:24px;font-size:20px">?</div>',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    popupAnchor: [0, -15],
+});
+
 // ユーザー位置用のアイコン
 const userIcon = L.icon({
     iconUrl:
@@ -36,6 +44,7 @@ interface MapComponentProps {
         node: WiresNode;
         lat: number;
         lon: number;
+        approx?: boolean;
     }>;
     center?: { lat: number; lon: number };
     userLocation?: {
@@ -115,10 +124,9 @@ function MapInner({ nodes, center, userLocation }: MapComponentProps) {
                 <Marker
                     key={`${item.node.dtmf_id}-${item.node.call_sign}-${index}`}
                     position={[item.lat, item.lon]}
-                    icon={
-                        analogOrDigital(item.node.ana_dig) === "Digital"
-                            ? digitalIcon
-                            : analogIcon
+                    icon={analogOrDigital(item.node.ana_dig) === "Digital"
+                        ? digitalIcon
+                        : analogIcon
                     }
                 >
                     <Popup>
@@ -137,11 +145,10 @@ function MapInner({ nodes, center, userLocation }: MapComponentProps) {
                                 <p>
                                     <strong>Type:</strong>{" "}
                                     <span
-                                        className={`px-2 py-1 rounded text-xs ${
-                                            item.node.ana_dig === "Digital"
+                                        className={`px-2 py-1 rounded text-xs ${item.node.ana_dig === "Digital"
                                                 ? "bg-blue-100 text-blue-800"
                                                 : "bg-green-100 text-green-800"
-                                        }`}
+                                            }`}
                                     >
                                         {item.node.ana_dig}
                                     </span>
@@ -150,6 +157,11 @@ function MapInner({ nodes, center, userLocation }: MapComponentProps) {
                                     <strong>Location:</strong> {item.node.city},{" "}
                                     {item.node.state}, {item.node.country}
                                 </p>
+                                {item.approx && (
+                                    <p className="font-semibold text-amber-700">
+                                        概略位置（市区町村レベル）
+                                    </p>
+                                )}
                                 <p>
                                     <strong>Frequency:</strong> {item.node.freq}
                                 </p>
