@@ -8,8 +8,12 @@ export default function Infomation() {
         {
             title: "おしらせ",
             content: "現在公式サイトがセキュリティ問題の対処のため停止しています。過去のデータを使用しているためデータが古い可能性がありますご注意ください。",
-        }
-    ]
+        },
+        {
+            title: "概略位置について",
+            content: "座標のないノードの一部は、市区町村レベルの概略位置を表示しています。これは局の正確な位置ではありません。概略位置の一部にはGeoNamesのデータを使用しています（GeoNames Gazetteer Data、CC BY 4.0）。",
+        },
+    ];
 
     if (infos.length === 0) {
         return;
