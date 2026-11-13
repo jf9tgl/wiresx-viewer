@@ -124,12 +124,9 @@ function MapInner({ nodes, center, userLocation }: MapComponentProps) {
                 <Marker
                     key={`${item.node.dtmf_id}-${item.node.call_sign}-${index}`}
                     position={[item.lat, item.lon]}
-                    icon={
-                        item.approx
-                            ? approximateIcon
-                            : analogOrDigital(item.node.ana_dig) === "Digital"
-                            ? digitalIcon
-                            : analogIcon
+                    icon={analogOrDigital(item.node.ana_dig) === "Digital"
+                        ? digitalIcon
+                        : analogIcon
                     }
                 >
                     <Popup>
@@ -148,11 +145,10 @@ function MapInner({ nodes, center, userLocation }: MapComponentProps) {
                                 <p>
                                     <strong>Type:</strong>{" "}
                                     <span
-                                        className={`px-2 py-1 rounded text-xs ${
-                                            item.node.ana_dig === "Digital"
+                                        className={`px-2 py-1 rounded text-xs ${item.node.ana_dig === "Digital"
                                                 ? "bg-blue-100 text-blue-800"
                                                 : "bg-green-100 text-green-800"
-                                        }`}
+                                            }`}
                                     >
                                         {item.node.ana_dig}
                                     </span>

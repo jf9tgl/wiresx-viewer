@@ -52,9 +52,9 @@ function calculateDistance(
     const a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos((lat1 * Math.PI) / 180) *
-            Math.cos((lat2 * Math.PI) / 180) *
-            Math.sin(dLon / 2) *
-            Math.sin(dLon / 2);
+        Math.cos((lat2 * Math.PI) / 180) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
 }
@@ -131,10 +131,10 @@ export default function MapPage() {
                     err.code === 1
                         ? "位置情報の使用が拒否されました"
                         : err.code === 2
-                        ? "位置情報を取得できませんでした"
-                        : err.code === 3
-                        ? "位置情報の取得がタイムアウトしました"
-                        : "位置情報の取得に失敗しました"
+                            ? "位置情報を取得できませんでした"
+                            : err.code === 3
+                                ? "位置情報の取得がタイムアウトしました"
+                                : "位置情報の取得に失敗しました"
                 );
                 setLocationLoading(false);
             },
@@ -404,17 +404,16 @@ export default function MapPage() {
                                                 {item.node.call_sign}
                                             </h3>
                                             <span
-                                                className={`px-2 py-1 rounded text-xs ${
-                                                    isThisDigital(
+                                                className={`px-2 py-1 rounded text-xs ${isThisDigital(
+                                                    item.node.ana_dig
+                                                )
+                                                    ? "bg-blue-100 text-blue-800"
+                                                    : isThisAnalog(
                                                         item.node.ana_dig
                                                     )
-                                                        ? "bg-blue-100 text-blue-800"
-                                                        : isThisAnalog(
-                                                              item.node.ana_dig
-                                                          )
                                                         ? "bg-red-100 text-red-800"
                                                         : "bg-green-100 text-green-800"
-                                                }`}
+                                                    }`}
                                             >
                                                 {item.node.ana_dig}
                                             </span>
@@ -441,10 +440,9 @@ export default function MapPage() {
                                             {item.node.country}
                                         </p>
                                         <p>
-                                            <span className="font-semibold">
-                                                Freq:
+                                            <span>
+                                                Freq: {item.node.freq}
                                             </span>{" "}
-                                            {item.node.freq}
                                             <span>SQL: {item.node.sql}</span>
                                         </p>
                                     </div>
@@ -537,11 +535,10 @@ export default function MapPage() {
                             <div>
                                 <span className="font-semibold">Type:</span>{" "}
                                 <span
-                                    className={`px-2 py-1 rounded text-xs ${
-                                        selectedNode.ana_dig === "Digital"
-                                            ? "bg-blue-100 text-blue-800"
-                                            : "bg-green-100 text-green-800"
-                                    }`}
+                                    className={`px-2 py-1 rounded text-xs ${selectedNode.ana_dig === "Digital"
+                                        ? "bg-blue-100 text-blue-800"
+                                        : "bg-green-100 text-green-800"
+                                        }`}
                                 >
                                     {selectedNode.ana_dig}
                                 </span>
@@ -590,6 +587,11 @@ export default function MapPage() {
                     </div>
                 </div>
             )}
+            <div>
+                <p className="text-sm text-gray-600 mt-4">
+                    <strong>注. 概略位置について:</strong>座標のないノードの一部は、市区町村レベルの概略位置を表示しています。これは局の正確な位置ではありません。概略位置の一部にはGeoNamesのデータを使用しています（GeoNames Gazetteer Data、CC BY 4.0）。
+                </p>
+            </div>
         </div>
     );
 }
