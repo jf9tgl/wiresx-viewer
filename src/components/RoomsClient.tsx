@@ -1,107 +1,85 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { WiresRoom } from "@/app/api/rooms/route";
-import { getCachedData, setCachedData } from "@/utils/cache";
+import { useWiresData } from "@/utils/useWiresData";
 import Infomation from "./Infomation";
 
 export default function RoomsPage() {
-    const [rooms, setRooms] = useState<WiresRoom[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const { data: rooms, loading, error } = useWiresData<WiresRoom>(
+        "wiresx_rooms",
+        "/api/rooms"
+    );
     const [searchTerm, setSearchTerm] = useState("");
     const [countryFilter, setCountryFilter] = useState("");
     const [sortBy, setSortBy] = useState<"active" | "name" | "none">("active");
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 50;
 
-    useEffect(() => {
-        async function fetchRooms() {
-            try {
-                // キャッシュをチェック
-                const cachedRooms = getCachedData<WiresRoom[]>("wiresx_rooms");
-                if (cachedRooms) {
-                    // データが中身がない場合は再取得
-                    if (cachedRooms.length === 0) {
-                        console.log("Cached rooms data is empty, refetching");
-                    } else {
-                        console.log("Using cached rooms data");
-                        setRooms(cachedRooms);
-                        setLoading(false);
-                        return;
-                    }
-                }
+    // 入力中は古い検索語で描画を続け、入力を優先する
+    const deferredSearch = useDeferredValue(searchTerm);
 
-                // キャッシュがない場合はAPIから取得
-                console.log("Fetching rooms from API");
-                const response = await fetch("/api/rooms");
-                if (!response.ok) throw new Error("Failed to fetch rooms");
-                const data = await response.json();
-                setRooms(data);
-
-                // データをキャッシュ
-                setCachedData("wiresx_rooms", data);
-            } catch (err) {
-                setError(
-                    err instanceof Error ? err.message : "An error occurred"
-                );
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchRooms();
-    }, []);
-
-    const countries = Array.from(
-        new Set(rooms.map((room) => room.country))
-    ).sort();
-
-    const filteredRooms = rooms.filter((room) => {
-        const matchesSearch =
-            room.room_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.comment.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            room.dtmf.includes(searchTerm);
-        const matchesCountry = !countryFilter || room.country === countryFilter;
-        return matchesSearch && matchesCountry;
-    });
-
-    // ソート処理
-    const sortedRooms = [...filteredRooms].sort((a, b) => {
-        if (sortBy === "active") {
-            // アクティブ数で降順ソート（数値として比較）
-            const actA = parseInt(a.act) || 0;
-            const actB = parseInt(b.act) || 0;
-            return actB - actA;
-        } else if (sortBy === "name") {
-            // ルーム名でアルファベット順
-            return a.room_name.localeCompare(b.room_name);
-        }
-        return 0; // ソートなし
-    });
-
-    // ページネーション
-    const totalPages = Math.ceil(sortedRooms.length / itemsPerPage);
-    const paginatedRooms = sortedRooms.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
+    const countries = useMemo(
+        () => Array.from(new Set(rooms.map((room) => room.country))).sort(),
+        [rooms]
     );
 
-    // フィルター・ソート変更時にページをリセット
-    useEffect(() => {
-        setCurrentPage(1);
-    }, [searchTerm, countryFilter, sortBy]);
+    // 検索対象の文字列を、データ取得時に1度だけ小文字化しておく
+    const searchIndex = useMemo(
+        () =>
+            rooms.map((room) => ({
+                room,
+                haystack: [
+                    room.room_name,
+                    room.city,
+                    room.state,
+                    room.country,
+                    room.id,
+                    room.comment,
+                ]
+                    .join("\n")
+                    .toLowerCase(),
+            })),
+        [rooms]
+    );
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl">Loading rooms...</div>
-            </div>
-        );
-    }
+    const sortedRooms = useMemo(() => {
+        const query = deferredSearch.toLowerCase();
+        const filtered = searchIndex
+            .filter(({ room, haystack }) => {
+                const matchesSearch =
+                    !query ||
+                    haystack.includes(query) ||
+                    room.dtmf.includes(deferredSearch);
+                const matchesCountry =
+                    !countryFilter || room.country === countryFilter;
+                return matchesSearch && matchesCountry;
+            })
+            .map(({ room }) => room);
+
+        // ソート処理（filter 済みの新しい配列なので、そのまま並べ替えてよい）
+        if (sortBy === "active") {
+            // アクティブ数で降順ソート（数値として比較）
+            return filtered.sort(
+                (a, b) => (parseInt(b.act) || 0) - (parseInt(a.act) || 0)
+            );
+        }
+        if (sortBy === "name") {
+            // ルーム名でアルファベット順
+            return filtered.sort((a, b) =>
+                a.room_name.localeCompare(b.room_name)
+            );
+        }
+        return filtered; // ソートなし
+    }, [searchIndex, deferredSearch, countryFilter, sortBy]);
+
+    // ページネーション（データ更新で総ページ数が減っても範囲内に収める）
+    const totalPages = Math.ceil(sortedRooms.length / itemsPerPage);
+    const page = Math.min(currentPage, Math.max(1, totalPages));
+    const paginatedRooms = sortedRooms.slice(
+        (page - 1) * itemsPerPage,
+        page * itemsPerPage
+    );
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -120,12 +98,18 @@ export default function RoomsPage() {
                     type="text"
                     placeholder="Search by Room Name, City, ID..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                        setSearchTerm(e.target.value);
+                        setCurrentPage(1);
+                    }}
                     className="flex-1 min-w-[200px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <select
                     value={countryFilter}
-                    onChange={(e) => setCountryFilter(e.target.value)}
+                    onChange={(e) => {
+                        setCountryFilter(e.target.value);
+                        setCurrentPage(1);
+                    }}
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">All Countries</option>
@@ -137,9 +121,10 @@ export default function RoomsPage() {
                 </select>
                 <select
                     value={sortBy}
-                    onChange={(e) =>
-                        setSortBy(e.target.value as "active" | "name" | "none")
-                    }
+                    onChange={(e) => {
+                        setSortBy(e.target.value as "active" | "name" | "none");
+                        setCurrentPage(1);
+                    }}
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="none">No Sort</option>
@@ -149,9 +134,16 @@ export default function RoomsPage() {
             </div>
 
             <div className="mb-4 text-gray-600">
-                Showing {paginatedRooms.length} of {sortedRooms.length} rooms
-                {sortedRooms.length !== rooms.length &&
-                    ` (filtered from ${rooms.length} total)`}
+                {loading ? (
+                    "Loading rooms..."
+                ) : (
+                    <>
+                        Showing {paginatedRooms.length} of {sortedRooms.length}{" "}
+                        rooms
+                        {sortedRooms.length !== rooms.length &&
+                            ` (filtered from ${rooms.length} total)`}
+                    </>
+                )}
             </div>
 
             {/* ページネーション */}
@@ -159,35 +151,35 @@ export default function RoomsPage() {
                 <div className="flex justify-center gap-2 mb-4">
                     <button
                         onClick={() => setCurrentPage(1)}
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最初
                     </button>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.max(1, p - 1))
+                            setCurrentPage(Math.max(1, page - 1))
                         }
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         前へ
                     </button>
                     <span className="px-4 py-1 flex items-center">
-                        {currentPage} / {totalPages}
+                        {page} / {totalPages}
                     </span>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                            setCurrentPage(Math.min(totalPages, page + 1))
                         }
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         次へ
                     </button>
                     <button
                         onClick={() => setCurrentPage(totalPages)}
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最後
@@ -220,6 +212,16 @@ export default function RoomsPage() {
                         </tr>
                     </thead>
                     <tbody>
+                        {loading && (
+                            <tr>
+                                <td
+                                    colSpan={6}
+                                    className="px-4 py-8 text-center text-gray-600"
+                                >
+                                    Loading rooms...
+                                </td>
+                            </tr>
+                        )}
                         {paginatedRooms.map((room, index) => (
                             <tr key={index} className="hover:bg-gray-50">
                                 <td className="px-4 py-2 border-b font-semibold">
@@ -261,35 +263,35 @@ export default function RoomsPage() {
                 <div className="flex justify-center gap-2 mt-4">
                     <button
                         onClick={() => setCurrentPage(1)}
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最初
                     </button>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.max(1, p - 1))
+                            setCurrentPage(Math.max(1, page - 1))
                         }
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         前へ
                     </button>
                     <span className="px-4 py-1 flex items-center">
-                        {currentPage} / {totalPages}
+                        {page} / {totalPages}
                     </span>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                            setCurrentPage(Math.min(totalPages, page + 1))
                         }
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         次へ
                     </button>
                     <button
                         onClick={() => setCurrentPage(totalPages)}
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最後

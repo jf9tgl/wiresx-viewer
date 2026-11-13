@@ -1,94 +1,71 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { WiresNode } from "@/app/api/nodes/route";
-import { getCachedData, setCachedData } from "@/utils/cache";
+import { useWiresData } from "@/utils/useWiresData";
 import { isThisAnalog, isThisDigital } from "@/utils/anaordig";
 import Infomation from "./Infomation";
 
 export default function NodesPage() {
-    const [nodes, setNodes] = useState<WiresNode[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const { data: nodes, loading, error } = useWiresData<WiresNode>(
+        "wiresx_nodes",
+        "/api/nodes"
+    );
     const [searchTerm, setSearchTerm] = useState("");
     const [countryFilter, setCountryFilter] = useState("");
     const [typeFilter, setTypeFilter] = useState<string>(""); // "Digital", "Analog", ""
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 50;
 
-    useEffect(() => {
-        async function fetchNodes() {
-            try {
-                // キャッシュをチェック
-                const cachedNodes = getCachedData<WiresNode[]>("wiresx_nodes");
-                if (cachedNodes) {
-                    // データが中身がない場合は再取得
-                    if (cachedNodes.length === 0) {
-                        console.log("Cached nodes data is empty, refetching");
-                    } else {
-                        console.log("Using cached nodes data");
-                        setNodes(cachedNodes);
-                        setLoading(false);
-                        return;
-                    }
-                }
+    // 入力中は古い検索語で描画を続け、入力を優先する
+    const deferredSearch = useDeferredValue(searchTerm);
 
-                // キャッシュがない場合はAPIから取得
-                console.log("Fetching nodes from API");
-                const response = await fetch("/api/nodes");
-                if (!response.ok) throw new Error("Failed to fetch nodes");
-                const data = await response.json();
-                setNodes(data);
-
-                // データをキャッシュ
-                setCachedData("wiresx_nodes", data);
-            } catch (err) {
-                setError(
-                    err instanceof Error ? err.message : "An error occurred"
-                );
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchNodes();
-    }, []);
-
-    const countries = Array.from(
-        new Set(nodes.map((node) => node.country))
-    ).sort();
-
-    const filteredNodes = nodes.filter((node) => {
-        const matchesSearch =
-            node.call_sign.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            node.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            node.state.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            node.country.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            node.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            node.dtmf_id.includes(searchTerm);
-        const matchesCountry = !countryFilter || node.country === countryFilter;
-        const matchesType = !typeFilter || node.ana_dig === typeFilter;
-        return matchesSearch && matchesCountry && matchesType;
-    });
-
-    // ページネーション
-    const totalPages = Math.ceil(filteredNodes.length / itemsPerPage);
-    const paginatedNodes = filteredNodes.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
+    const countries = useMemo(
+        () => Array.from(new Set(nodes.map((node) => node.country))).sort(),
+        [nodes]
     );
 
-    // フィルター変更時にページをリセット
-    useEffect(() => {
-        setCurrentPage(1);
-    }, [searchTerm, countryFilter, typeFilter]);
+    // 検索対象の文字列を、データ取得時に1度だけ小文字化しておく
+    const searchIndex = useMemo(
+        () =>
+            nodes.map((node) => ({
+                node,
+                haystack: [
+                    node.call_sign,
+                    node.city,
+                    node.state,
+                    node.country,
+                    node.id,
+                ]
+                    .join("\n")
+                    .toLowerCase(),
+            })),
+        [nodes]
+    );
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl">Loading nodes...</div>
-            </div>
-        );
-    }
+    const filteredNodes = useMemo(() => {
+        const query = deferredSearch.toLowerCase();
+        return searchIndex
+            .filter(({ node, haystack }) => {
+                const matchesSearch =
+                    !query ||
+                    haystack.includes(query) ||
+                    node.dtmf_id.includes(deferredSearch);
+                const matchesCountry =
+                    !countryFilter || node.country === countryFilter;
+                const matchesType = !typeFilter || node.ana_dig === typeFilter;
+                return matchesSearch && matchesCountry && matchesType;
+            })
+            .map(({ node }) => node);
+    }, [searchIndex, deferredSearch, countryFilter, typeFilter]);
+
+    // ページネーション（データ更新で総ページ数が減っても範囲内に収める）
+    const totalPages = Math.ceil(filteredNodes.length / itemsPerPage);
+    const page = Math.min(currentPage, Math.max(1, totalPages));
+    const paginatedNodes = filteredNodes.slice(
+        (page - 1) * itemsPerPage,
+        page * itemsPerPage
+    );
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -107,12 +84,18 @@ export default function NodesPage() {
                     type="text"
                     placeholder="Search by Call Sign, City, ID..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                        setSearchTerm(e.target.value);
+                        setCurrentPage(1);
+                    }}
                     className="flex-1 min-w-[200px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <select
                     value={countryFilter}
-                    onChange={(e) => setCountryFilter(e.target.value)}
+                    onChange={(e) => {
+                        setCountryFilter(e.target.value);
+                        setCurrentPage(1);
+                    }}
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">All Countries</option>
@@ -124,7 +107,10 @@ export default function NodesPage() {
                 </select>
                 <select
                     value={typeFilter}
-                    onChange={(e) => setTypeFilter(e.target.value)}
+                    onChange={(e) => {
+                        setTypeFilter(e.target.value);
+                        setCurrentPage(1);
+                    }}
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                     <option value="">All Types</option>
@@ -133,44 +119,51 @@ export default function NodesPage() {
                 </select>
             </div>
             <div className="mb-4 text-gray-600">
-                Showing {paginatedNodes.length} of {filteredNodes.length} nodes
-                {filteredNodes.length !== nodes.length &&
-                    ` (filtered from ${nodes.length} total)`}
+                {loading ? (
+                    "Loading nodes..."
+                ) : (
+                    <>
+                        Showing {paginatedNodes.length} of{" "}
+                        {filteredNodes.length} nodes
+                        {filteredNodes.length !== nodes.length &&
+                            ` (filtered from ${nodes.length} total)`}
+                    </>
+                )}
             </div>
             {/* ページネーション */}
             {totalPages > 1 && (
                 <div className="flex justify-center gap-2 mb-4">
                     <button
                         onClick={() => setCurrentPage(1)}
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最初
                     </button>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.max(1, p - 1))
+                            setCurrentPage(Math.max(1, page - 1))
                         }
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         前へ
                     </button>
                     <span className="px-4 py-1 flex items-center">
-                        {currentPage} / {totalPages}
+                        {page} / {totalPages}
                     </span>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                            setCurrentPage(Math.min(totalPages, page + 1))
                         }
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         次へ
                     </button>
                     <button
                         onClick={() => setCurrentPage(totalPages)}
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最後
@@ -208,6 +201,16 @@ export default function NodesPage() {
                         </tr>
                     </thead>
                     <tbody>
+                        {loading && (
+                            <tr>
+                                <td
+                                    colSpan={8}
+                                    className="px-4 py-8 text-center text-gray-600"
+                                >
+                                    Loading nodes...
+                                </td>
+                            </tr>
+                        )}
                         {paginatedNodes.map((node, index) => (
                             <tr key={index} className="hover:bg-gray-50">
                                 <td className="px-4 py-2 border-b font-mono font-semibold">
@@ -262,35 +265,35 @@ export default function NodesPage() {
                 <div className="flex justify-center gap-2 mt-4">
                     <button
                         onClick={() => setCurrentPage(1)}
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最初
                     </button>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.max(1, p - 1))
+                            setCurrentPage(Math.max(1, page - 1))
                         }
-                        disabled={currentPage === 1}
+                        disabled={page === 1}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         前へ
                     </button>
                     <span className="px-4 py-1 flex items-center">
-                        {currentPage} / {totalPages}
+                        {page} / {totalPages}
                     </span>
                     <button
                         onClick={() =>
-                            setCurrentPage((p) => Math.min(totalPages, p + 1))
+                            setCurrentPage(Math.min(totalPages, page + 1))
                         }
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         次へ
                     </button>
                     <button
                         onClick={() => setCurrentPage(totalPages)}
-                        disabled={currentPage === totalPages}
+                        disabled={page === totalPages}
                         className="px-3 py-1 border rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                     >
                         最後

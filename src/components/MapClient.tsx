@@ -3,7 +3,7 @@
 import { useEffect, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import { WiresNode } from "@/app/api/nodes/route";
-import { getCachedData, setCachedData } from "@/utils/cache";
+import { useWiresData } from "@/utils/useWiresData";
 import { isThisAnalog, isThisDigital } from "@/utils/anaordig";
 import Infomation from "./Infomation";
 
@@ -68,9 +68,10 @@ interface UserLocation {
 }
 
 export default function MapPage() {
-    const [nodes, setNodes] = useState<WiresNode[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+    const { data: nodes, loading, error } = useWiresData<WiresNode>(
+        "wiresx_nodes",
+        "/api/nodes"
+    );
     const [selectedNode, setSelectedNode] = useState<WiresNode | null>(null);
     const [countryFilter, setCountryFilter] = useState("");
     const [typeFilter, setTypeFilter] = useState<string>(""); // "Digital", "Analog", ""
@@ -166,51 +167,14 @@ export default function MapPage() {
         fetchUserLocation();
     }, []);
 
-    useEffect(() => {
-        async function fetchNodes() {
-            try {
-                // キャッシュをチェック
-                const cachedNodes = getCachedData<WiresNode[]>("wiresx_nodes");
-                if (cachedNodes) {
-                    console.log("Using cached nodes data");
-                    setNodes(cachedNodes);
-                    setLoading(false);
-                    return;
-                }
+    const countries = useMemo(
+        () => Array.from(new Set(nodes.map((node) => node.country))).sort(),
+        [nodes]
+    );
 
-                // キャッシュがない場合はAPIから取得
-                console.log("Fetching nodes from API");
-                const response = await fetch("/api/nodes");
-                if (!response.ok) throw new Error("Failed to fetch nodes");
-                const data = await response.json();
-                setNodes(data);
-
-                // データをキャッシュ
-                setCachedData("wiresx_nodes", data);
-            } catch (err) {
-                setError(
-                    err instanceof Error ? err.message : "An error occurred"
-                );
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchNodes();
-    }, []);
-
-    const countries = Array.from(
-        new Set(nodes.map((node) => node.country))
-    ).sort();
-
-    const filteredNodes = nodes.filter((node) => {
-        const matchesCountry = !countryFilter || node.country === countryFilter;
-        const matchesType = !typeFilter || node.ana_dig === typeFilter;
-        return matchesCountry && matchesType;
-    });
-
-    // 座標がある有効なノードのみ
-    const validNodes = useMemo(() => {
-        return filteredNodes
+    // 座標のパースはデータ取得時に1度だけ行う（フィルタ変更のたびにやり直さない）
+    const parsedNodes = useMemo(() => {
+        return nodes
             .map((node) => {
                 const lat = parseCoordinate(node.lat);
                 const lon = parseCoordinate(node.lon);
@@ -230,7 +194,17 @@ export default function MapPage() {
                     lon: number;
                 } => item !== null
             );
-    }, [filteredNodes]);
+    }, [nodes]);
+
+    // 座標がある有効なノードのみ（国・種別フィルタ適用後）
+    const validNodes = useMemo(() => {
+        return parsedNodes.filter(({ node }) => {
+            const matchesCountry =
+                !countryFilter || node.country === countryFilter;
+            const matchesType = !typeFilter || node.ana_dig === typeFilter;
+            return matchesCountry && matchesType;
+        });
+    }, [parsedNodes, countryFilter, typeFilter]);
 
     // 現在地から近い順にソート
     const nearbyNodes = useMemo(() => {
@@ -276,14 +250,6 @@ export default function MapPage() {
         return { lat: 35.6762, lon: 139.6503 }; // デフォルト（東京）
     }, [validNodes, userLocation]);
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <div className="text-xl">Loading map...</div>
-            </div>
-        );
-    }
-    
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-6">WIRES-X Node Map</h1>
@@ -349,7 +315,9 @@ export default function MapPage() {
                 </button>
 
                 <span className="text-gray-600">
-                    Map: {mapNodes.length} / Total: {validNodes.length} nodes
+                    {loading
+                        ? "Loading nodes..."
+                        : `Map: ${mapNodes.length} / Total: ${validNodes.length} nodes`}
                 </span>
                 {userLocation && (
                     <div className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg">
