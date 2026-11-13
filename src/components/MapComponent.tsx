@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import L from "leaflet";
 import { WiresNode } from "@/app/api/nodes/route";
 import { analogOrDigital } from "../utils/anaordig";
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 const digitalIcon = L.icon({
     iconUrl: "/assets/map/digital-pin.png",
@@ -46,7 +46,7 @@ interface MapComponentProps {
     } | null;
 }
 
-function MapComponent({ nodes, center, userLocation }: MapComponentProps) {
+function MapInner({ nodes, center, userLocation }: MapComponentProps) {
     // 中心座標を計算
     const mapCenter = center || {
         lat:
@@ -168,6 +168,35 @@ function MapComponent({ nodes, center, userLocation }: MapComponentProps) {
             ))}
         </MapContainer>
     );
+}
+
+/**
+ * 画面が表示されている間だけ地図（Leaflet）を作る。
+ *
+ * cacheComponents が有効だと、遷移した画面は破棄されず非表示のまま保持され、
+ * 戻ったときに effect だけが再実行される。このとき Leaflet の地図は非表示になる際に
+ * 破棄済みなので、そのまま再利用すると "Map container is being reused" などで落ちる。
+ * effect の開始・終了に合わせて地図を作り直すことで、これを避ける。
+ */
+function MapComponent(props: MapComponentProps) {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- effect の開始と終了に合わせて地図を作り直すため
+        setActive(true);
+        return () => setActive(false);
+    }, []);
+
+    if (!active) {
+        return (
+            <div
+                className="rounded-lg bg-gray-100"
+                style={{ height: "600px", width: "100%" }}
+            />
+        );
+    }
+
+    return <MapInner {...props} />;
 }
 
 export default memo(MapComponent);
